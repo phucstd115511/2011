@@ -7,13 +7,13 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0d'/%3E%3Ccircle cx='13' cy='19' r='6' fill='%23fff'/%3E%3Ccircle cx='25' cy='23' r='2.6' fill='%23fff'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,500;0,600;1,400;1,600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../styles.css" />
 </head>
 <body>
-  <!-- Layer 1: Background matched to active book & summary stage -->
+  <!-- Layer 1: Background matched to active book -->
   <div id="bg">
-    <img id="bgArt" src="../../assets/scenes/lang-du-1.svg" alt="" />
+    <img id="bgArt" src="../../assets/books/lang-du-trong-van-hoa-viet-nam.jpg" alt="" />
     <div id="bgScrim"></div>
     <h1 id="bgWord">BẢN SẮC</h1>
   </div>
@@ -27,11 +27,9 @@
   <div id="hint"><b>Kéo</b> để xoay tờ giấy 3D<span class="ptr"> &nbsp;·&nbsp; <b>Rê chuột</b> để chiếu sáng</span></div>
 
   <!-- Floating Top HUD -->
-  <header class="hud-top" aria-label="Điều hướng sách và cảnh">
+  <header class="hud-top" aria-label="Điều hướng sách và chất liệu">
     <div id="bookTabsRow" class="hud-row"></div>
     <div class="hud-row">
-      <div id="stageTabs" style="display:flex; gap:4px;"></div>
-      <span class="hud-divider"></span>
       <div id="variantTabs" style="display:flex; gap:4px;">
         <button class="pill-btn pill-btn--gold is-active" data-variant="original" type="button">Kính 3D</button>
         <button class="pill-btn pill-btn--gold" data-variant="certificate" type="button">Giấy cổ</button>

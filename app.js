@@ -2,7 +2,7 @@
   'use strict';
 
   const T = window.THREE;
-  const STORAGE_KEY = 'tri_an_20_11_books_v2';
+  const STORAGE_KEY = 'tri_an_20_11_books_v3';
   const SETTINGS_KEY = 'tri_an_20_11_settings_v3';
   const PUBLIC_GITHUB_PAGES_URL = 'https://phucstd115511.github.io/2011/';
 
@@ -22,36 +22,24 @@
       title: 'Bản sắc văn hóa Việt Nam',
       author: 'GS. Phan Ngọc',
       url: 'https://fr.scribd.com/document/1027136379/B%E1%BA%A3n-S%E1%BA%AFc-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam-Phan-Ng%E1%BB%8Dc',
+      image: './assets/books/ban-sac-van-hoa-viet-nam.jpg',
       accentColor: '#d97706',
-      stages: [
+      bullets: [
         {
-          label: 'CHẶNG 01 · TÂM THỨC VIỆT',
-          title: 'Bốn trục bất biến: Tổ quốc, Làng xã, Thân phận, Diện mạo',
-          narrative:
-            'GS. Phan Ngọc định nghĩa văn hóa là hệ thống quan hệ và “kiểu lựa chọn riêng” của dân tộc. Qua mọi biến động lịch sử, tâm thức Việt luôn neo giữ bốn nhu cầu bất biến gắn với mái đình làng xã và non sông Tổ quốc.',
-          quote: '“Bản sắc văn hóa là mặt bất biến của một hệ thống quan hệ qua lịch sử.”',
-          takeaway: 'Nhận diện đúng 4 trụ cột tâm thức giúp thế hệ trẻ tự tin giữ gốc rễ.',
-          image: './assets/scenes/ban-sac-1.svg'
+          heading: 'Bốn trục tâm thức bất biến',
+          text: 'Văn hóa là hệ thống quan hệ gắn kết con người với Tổ quốc, Làng xã, Thân phận và Diện mạo qua mọi biến động.'
         },
         {
-          label: 'CHẶNG 02 · KHÚC XẠ VĂN HÓA',
-          title: 'Tiếp nhận Nho học, Đạo giáo & Phương Tây qua sự khúc xạ',
-          narrative:
-            'Khi tiếp xúc với văn hóa Trung Hoa hay văn minh phương Tây, người Việt không sao chép rập khuôn mà đưa các giá trị ngoại lai đi qua “lăng kính khúc xạ” của tâm thức bản địa để biến đổi phù hợp.',
-          quote: '“Người Việt tiếp nhận Nho học không rập khuôn mà bằng một sự khúc xạ.”',
-          takeaway: 'Bản lĩnh văn hóa nằm ở khả năng chuyển hóa ngoại lực thành nội lực.',
-          image: './assets/scenes/ban-sac-2.svg'
+          heading: 'Lăng kính khúc xạ văn hóa',
+          text: 'Người Việt tiếp thu Nho, Phật, Đạo và văn minh phương Tây bằng sự khúc xạ bản địa chứ không sao chép rập khuôn.'
         },
         {
-          label: 'CHẶNG 03 · HỘI NHẬP 20/11',
-          title: 'Giữ gìn bản sắc khi bước ra biển lớn hội nhập',
-          narrative:
-            'Trong bối cảnh kinh tế thị trường và toàn cầu hóa, tính linh hoạt và tình nghĩa cộng đồng trở thành ưu thế giúp người Việt mở cửa đón tinh hoa nhân loại mà vẫn giữ vững căn cước văn hóa.',
-          quote: '“Muốn hội nhập không hòa tan, phải thấu hiểu cái bất biến trong tâm thức Việt.”',
-          takeaway: 'Tri ân 20/11: Trao cho người học nền tảng văn hóa vững chắc để vươn xa.',
-          image: './assets/scenes/ban-sac-3.svg'
+          heading: 'Bản lĩnh hội nhập 20/11',
+          text: 'Thấu hiểu cái bất biến của dân tộc là chìa khóa giúp thế hệ trẻ mở cửa đón tinh hoa mà không hòa tan.'
         }
-      ]
+      ],
+      quote: '“Bản sắc văn hóa là mặt bất biến của một hệ thống quan hệ qua lịch sử.”',
+      takeaway: 'Giữ vững bốn trụ cột tâm thức để tự tin chuyển hóa ngoại lực thành nội lực.'
     },
     {
       id: 'giao-luu-tiep-bien-van-hoa',
@@ -60,36 +48,24 @@
       title: 'Giao lưu tiếp biến văn hóa & sự biến đổi văn hóa Việt Nam',
       author: 'Chuyên khảo Văn hóa học',
       url: 'https://fr.scribd.com/document/1049743615/8002-Giao-L%C6%B0u-Ti%E1%BA%BFp-Bi%E1%BA%BFn-V%C4%83n-Hoa-Va-S%E1%BB%B1-Bi%E1%BA%BFn-%C4%90%E1%BB%95i-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam',
+      image: './assets/books/giao-luu-tiep-bien-van-hoa.jpg',
       accentColor: '#34d399',
-      stages: [
+      bullets: [
         {
-          label: 'CHẶNG 01 · NỘI SINH – NGOẠI SINH',
-          title: 'Cơ tầng bản địa đón nhận và chọn lọc dòng chảy bên ngoài',
-          narrative:
-            'Giao lưu và tiếp biến văn hóa diễn ra liên tục qua thương mại, tôn giáo và lịch sử. Mọi yếu tố ngoại sinh muốn bén rễ lâu dài đều phải hòa quyện với cơ tầng văn hóa nội sinh sẵn có.',
-          quote: '“Không có nền văn hóa nào phát triển được nếu đóng cửa biệt lập.”',
-          takeaway: 'Cơ tầng bản địa vững chắc chính là bộ rễ giữ văn hóa không bật gốc.',
-          image: './assets/scenes/giao-luu-1.svg'
+          heading: 'Hòa quyện nội sinh – ngoại sinh',
+          text: 'Mọi yếu tố ngoại lai muốn bén rễ lâu dài đều phải đi qua sự chọn lọc của cơ tầng văn hóa bản địa Việt Nam.'
         },
         {
-          label: 'CHẶNG 02 · BA CUỘC TIẾP XÚC',
-          title: 'Từ Đông Á, Ấn Độ – Champa đến chữ Quốc ngữ & Phương Tây',
-          narrative:
-            'Việt Nam trải qua những cuộc giao thoa sâu sắc với văn hóa Đông Á (Nho – Phật – Đạo), văn hóa Ấn Độ qua Champa – Óc Eo, và làn sóng cận đại phương Tây tạo nên chữ Quốc ngữ cùng đô thị mới.',
-          quote: '“Đứng ở ngã tư đường giao lưu, văn hóa Việt biết đối đầu và Việt hóa.”',
-          takeaway: 'Mỗi giai đoạn tiếp biến đều bồi đắp thêm tầng lớp giá trị cho di sản Việt.',
-          image: './assets/scenes/giao-luu-2.svg'
+          heading: 'Ba cuộc tiếp xúc lịch sử',
+          text: 'Văn hóa Việt bồi đắp qua giao thoa Đông Á, Ấn Độ – Champa và phương Tây cận đại, khai sinh chữ Quốc ngữ.'
         },
         {
-          label: 'CHẶNG 03 · SỨC ĐỀ KHÁNG SỐ',
-          title: 'Xây dựng sức đề kháng văn hóa trước làn sóng toàn cầu',
-          narrative:
-            'Trước sự bùng nổ của công nghệ và văn hóa đại chúng toàn cầu, bài học tiếp biến nhắc ta giữ gìn lòng yêu nước, ngôn ngữ mẹ đẻ và tinh thần cộng đồng làm tấm khiên bảo vệ bản sắc.',
-          quote: '“Sức đề kháng văn hóa giúp tiếp thu cái tiến bộ mà không đánh mất mình.”',
-          takeaway: 'Giáo dục văn hóa là trao cho thế hệ trẻ chiếc la bàn trong thế giới phẳng.',
-          image: './assets/scenes/giao-luu-3.svg'
+          heading: 'Sức đề kháng trong kỷ nguyên số',
+          text: 'Lòng yêu nước, tiếng Việt và nghĩa tình cộng đồng tạo nên tấm khiên bản sắc trước làn sóng toàn cầu hóa.'
         }
-      ]
+      ],
+      quote: '“Đứng ở ngã tư đường giao lưu, văn hóa Việt biết đối đầu và Việt hóa.”',
+      takeaway: 'Tiếp thu cái mới tiến bộ trên nền tảng cội nguồn để không đánh mất mình.'
     },
     {
       id: 'co-so-van-hoa-viet-nam',
@@ -98,36 +74,24 @@
       title: 'Cơ sở văn hóa Việt Nam',
       author: 'GS. TSKH Trần Ngọc Thêm',
       url: 'https://fr.scribd.com/document/945446496/C%C6%A1-S%E1%BB%9F-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam-Tr%E1%BA%A7n-Ng%E1%BB%8Dc-Them-Nxb-%C4%90HQGHN-2024',
+      image: './assets/books/co-so-van-hoa-viet-nam.jpg',
       accentColor: '#fbbf24',
-      stages: [
+      bullets: [
         {
-          label: 'CHẶNG 01 · GỐC LÚA NƯỚC',
-          title: 'Loại hình văn hóa trọng tĩnh, trọng tình và ưa hài hòa',
-          narrative:
-            'GS. Trần Ngọc Thêm lý giải văn hóa Việt bắt nguồn từ nền nông nghiệp lúa nước vùng sông Hồng và Đông Nam Á — hình thành lối tư duy tổng hợp, linh hoạt và gắn bó mật thiết với thiên nhiên.',
-          quote: '“Đặc trưng tối thượng của văn hóa gốc nông nghiệp là trọng tình và hài hòa.”',
-          takeaway: 'Chìa khóa nông nghiệp lúa nước giải mã mọi tập quán ứng xử người Việt.',
-          image: './assets/scenes/co-so-1.svg'
+          heading: 'Cội nguồn văn hóa gốc lúa nước',
+          text: 'Hình thành từ vùng châu thổ sông Hồng và Đông Nam Á, tạo nên lối sống trọng tĩnh, trọng tình và ưa hài hòa.'
         },
         {
-          label: 'CHẶNG 02 · NHẬN THỨC VŨ TRỤ',
-          title: 'Triết lý Âm Dương, Tam Tài và Ngũ Hành',
-          narrative:
-            'Người Việt nhận thức thế giới qua cặp đôi Âm Dương bổ sung cho nhau, đặt con người vào thế cân bằng giữa Trời và Đất (Tam Tài) cùng quy luật tương sinh tương khắc của Ngũ Hành và lịch Can Chi.',
-          quote: '“Tư duy Âm Dương giúp người Việt nhìn nhận sự vật uyển chuyển, không cực đoan.”',
-          takeaway: 'Sự cân bằng hài hòa là thước đo lý tưởng trong tư duy truyền thống.',
-          image: './assets/scenes/co-so-2.svg'
+          heading: 'Triết lý Âm Dương – Ngũ Hành',
+          text: 'Tư duy tổng hợp nhìn vạn vật trong sự bổ sung cân bằng giữa Trời – Đất – Con người và quy luật tương sinh.'
         },
         {
-          label: 'CHẶNG 03 · LÀNG NƯỚC & ĐỜI SỐNG',
-          title: 'Cấu trúc Làng – Nước và nghệ thuật sống thuận tự nhiên',
-          narrative:
-            'Từ tế bào làng xã mang tính cộng đồng và tự trị đến bữa cơm hài hòa ngũ vị, tà áo mềm mại và ngôi nhà đón gió sông nước — tất cả thấm đẫm tinh thần dung hợp Việt Nam.',
-          quote: '“Làng là tế bào gốc, nơi lưu giữ phong tục, tín ngưỡng và tình nghĩa.”',
-          takeaway: 'Những điều bình dị trong ăn, mặc, ở hàng ngày chính là bảo tàng sống.',
-          image: './assets/scenes/co-so-3.svg'
+          heading: 'Cấu trúc Làng – Nước bền chặt',
+          text: 'Từ tế bào làng xã tự trị đến nếp ăn, mặc, ở thuận tự nhiên đều thấm đẫm tinh thần dung hợp của người Việt.'
         }
-      ]
+      ],
+      quote: '“Đặc trưng tối thượng của văn hóa gốc nông nghiệp là trọng tình và hài hòa.”',
+      takeaway: 'Giải mã phong tục Việt từ chính nền văn minh lúa nước giàu tính nhân văn.'
     },
     {
       id: 'viet-nam-van-hoa-su-cuong',
@@ -136,36 +100,24 @@
       title: 'Việt Nam văn hóa sử cương',
       author: 'Học giả Đào Duy Anh',
       url: 'https://fr.scribd.com/document/675715360/Vi%E1%BB%87t-Nam-V%C4%83n-Hoa-S%E1%BB%AD-C%C6%B0%C6%A1ng-%C4%90ao-Duy-Anh',
+      image: './assets/books/viet-nam-van-hoa-su-cuong.jpg',
       accentColor: '#60a5fa',
-      stages: [
+      bullets: [
         {
-          label: 'CHẶNG 01 · SINH HOẠT DÂN TỘC',
-          title: '“Văn hóa tức là sinh hoạt” — Kinh tế & Đời sống (1938)',
-          narrative:
-            'Ra đời năm 1938, tác phẩm mở đầu bằng định nghĩa súc tích “Văn hóa tức là sinh hoạt”, khảo sát toàn diện nghề nông, thủ công mỹ nghệ, thương nghiệp và địa lý nuôi dưỡng dân tộc suốt bốn nghìn năm.',
-          quote: '“Văn hóa tức là sinh hoạt, bao gồm cả đời sống vật chất lẫn tinh thần.”',
-          takeaway: 'Nghiên cứu văn hóa là nhìn vào chính đời sống lao động thực tiễn.',
-          image: './assets/scenes/su-cuong-1.svg'
+          heading: '“Văn hóa tức là sinh hoạt” (1938)',
+          text: 'Khảo sát toàn diện nền kinh tế nông nghiệp, thủ công mỹ nghệ, gốm sứ, dệt lụa và đời sống vật chất bốn nghìn năm.'
         },
         {
-          label: 'CHẶNG 02 · XÃ HỘI & KHOA CỬ',
-          title: 'Thiết chế làng xã, khoa cử, chữ Nôm và Tam giáo',
-          narrative:
-            'Đào Duy Anh hệ thống hóa cấu trúc gia đình, làng xã, bộ máy nhà nước cùng bức tranh trí thức sinh hoạt: từ chế độ khoa cử Nho học đến văn học chữ Hán, chữ Nôm và nghệ thuật cổ truyền.',
-          quote: '“Hiểu tổ chức xã hội và đời sống trí thức xưa là nắm được mạch nguồn sử Việt.”',
-          takeaway: 'Kho tư liệu đồ sộ của Đào Duy Anh vẫn nguyên giá trị cho người học.',
-          image: './assets/scenes/su-cuong-2.svg'
+          heading: 'Thiết chế xã hội & khoa cử',
+          text: 'Hệ thống hóa cấu trúc gia đình, làng xã, chế độ khoa cử Nho học, văn học chữ Hán – Nôm và Tam giáo cổ truyền.'
         },
         {
-          label: 'CHẶNG 03 · THỨC TỈNH THẾ HỆ',
-          title: 'Ôn lại vốn văn hóa nước nhà trước làn sóng Tây phương',
-          narrative:
-            'Trước cuộc va đập Đông – Tây đầu thế kỷ XX, học giả Đào Duy Anh viết sách để người Việt hiểu sâu sắc cội nguồn dân tộc, từ đó tỉnh táo chọn lọc giá trị mới của văn minh nhân loại.',
-          quote: '“Cần ôn lại cái vốn văn hóa nước nhà để đối diện và tiếp thu văn minh mới.”',
-          takeaway: 'Tinh thần tự tôn dân tộc và học thuật nghiêm cẩn là di sản của người thầy.',
-          image: './assets/scenes/su-cuong-3.svg'
+          heading: 'Thức tỉnh bản lĩnh thế hệ mới',
+          text: 'Viết trong cuộc va đập Đông – Tây đầu thế kỷ XX để người Việt ôn lại vốn cổ và tỉnh táo đón văn minh mới.'
         }
-      ]
+      ],
+      quote: '“Văn hóa tức là sinh hoạt, bao gồm cả đời sống vật chất lẫn tinh thần.”',
+      takeaway: 'Di sản học thuật nghiêm cẩn giúp thế hệ sau hiểu sâu sắc mạch nguồn sử Việt.'
     },
     {
       id: 'lang-du-trong-van-hoa-viet-nam',
@@ -174,36 +126,24 @@
       title: 'Lãng du trong văn hóa Việt Nam',
       author: 'Nhà văn hóa Hữu Ngọc',
       url: 'https://fr.scribd.com/document/804984636/Lang-Du-Trong-Van-Hoa-Viet-Nam-Huu-Ngoc',
+      image: './assets/books/lang-du-trong-van-hoa-viet-nam.jpg',
       accentColor: '#f472b6',
-      stages: [
+      bullets: [
         {
-          label: 'CHẶNG 01 · ĐẤT VIỆT MUÔN SẮC',
-          title: 'Hành trình xê dịch từ núi cao Tây Bắc tới Cửu Long',
-          narrative:
-            'Với tâm thế lãng du thong thả, học giả Hữu Ngọc dẫn người đọc đi dọc chiều dài đất nước — qua phiên chợ vùng cao, phố cổ miền Trung đến miệt vườn Nam Bộ để cảm nhận vẻ đẹp phong tục từng miền.',
-          quote: '“Mỗi miền đất Việt Nam là một trang ký ức sống động về phong tục và tâm hồn.”',
-          takeaway: 'Sự đa dạng vùng miền tạo nên bức tranh văn hóa vừa thống nhất vừa phong phú.',
-          image: './assets/scenes/lang-du-1.svg'
+          heading: 'Hành trình xê dịch muôn sắc Việt',
+          text: 'Từ phiên chợ núi cao Tây Bắc, phố cổ miền Trung đến sông nước Cửu Long, khắc họa nét đẹp phong tục từng miền.'
         },
         {
-          label: 'CHẶNG 02 · TẢN VĂN UYÊN BÁC',
-          title: 'Chân dung tâm hồn Việt bên chén trà sen và trang sách nhỏ',
-          narrative:
-            'Bằng lối viết tản văn mộc mạc như chuyện trò mà uyên bác sâu xa, cuốn sách phác họa nét đẹp hiếu học, trọng nghĩa tình, thờ cúng tổ tiên và cách ứng xử tinh tế trong gia đình Việt.',
-          quote: '“Văn hóa hiện diện trong chén trà sớm, câu ca dao và ký ức làng quê.”',
-          takeaway: 'Những trang ký ngắn giàu cảm xúc giúp người đọc yêu văn hóa tự nhiên.',
-          image: './assets/scenes/lang-du-2.svg'
+          heading: 'Tản văn uyên bác bên chén trà sen',
+          text: 'Giọng văn mộc mạc mà sâu xa kể chuyện hiếu học, đạo lý uống nước nhớ nguồn và nếp ứng xử tinh tế trong gia đình.'
         },
         {
-          label: 'CHẶNG 03 · CẦU NỐI NĂM CHÂU',
-          title: '“Hòa nhập nhưng không hòa tan” — Lan tỏa ra thế giới',
-          narrative:
-            'Xuất phát từ những bài viết giới thiệu văn hóa Việt cho bạn bè quốc tế, Hữu Ngọc gửi gắm thông điệp: muốn đối thoại bình đẳng với thế giới, ta phải trân trọng và kể được câu chuyện bản sắc của mình.',
-          quote: '“Hòa nhập với nhân loại nhưng tuyệt đối không hòa tan bản sắc cội nguồn.”',
-          takeaway: 'Tri ân 20/11: Mỗi trang sách là một nhịp cầu lan tỏa tri thức quê hương.',
-          image: './assets/scenes/lang-du-3.svg'
+          heading: 'Nhịp cầu lan tỏa ra năm châu',
+          text: 'Giới thiệu tâm hồn Việt với bạn bè quốc tế cùng thông điệp đối thoại bình đẳng: hòa nhập nhưng không hòa tan.'
         }
-      ]
+      ],
+      quote: '“Hòa nhập với nhân loại nhưng tuyệt đối không hòa tan bản sắc cội nguồn.”',
+      takeaway: 'Mỗi trang ký văn hóa là nhịp cầu đưa tri thức và hồn Việt chạm tới trái tim.'
     }
   ];
 
@@ -294,7 +234,7 @@
     );
   }
 
-  function splitSummaryIntoStages(rawText, title) {
+  function splitSummaryIntoBullets(rawText, title) {
     const text = (rawText || '').trim();
     let parts = text
       .split(/\n+/)
@@ -309,12 +249,8 @@
     }
     while (parts.length < 3) parts.push(parts[parts.length - 1] || `Tóm tắt sách "${title}" nhân dịp 20/11.`);
     return [0, 1, 2].map((i) => ({
-      label: `CHẶNG 0${i + 1}`,
-      title: parts[i].split(/[,.;:!?]/)[0].slice(0, 56) || `${title} — Phần ${i + 1}`,
-      narrative: parts[i],
-      quote: `“${parts[i].slice(0, 96)}${parts[i].length > 96 ? '…' : ''}”`,
-      takeaway: `Giá trị cốt lõi chặng ${i + 1} của ${title}`,
-      image: './assets/scenes/ban-sac-' + (i + 1) + '.svg'
+      heading: parts[i].split(/[,.;:!?]/)[0].slice(0, 44) || `Luận điểm 0${i + 1}`,
+      text: parts[i]
     }));
   }
 
@@ -326,17 +262,16 @@
     const foundIdx = books.findIndex((b) => b.id === route.bookId);
     if (foundIdx >= 0) activeBookIdx = foundIdx;
   }
-  let stageFilter = 'all'; // 'all' | 0 | 1 | 2
   let currentVariant = 'original'; // 'original' | 'certificate'
   let modalOpen = false;
   let loadedArtImg = null;
   let loadedArtSrc = '';
 
   /* ======================================================================
-     1. 3D PAPER TEXTURE AUTHORING (Exact ThreeUI 1200x1656 / 1400x1932 Grid)
+     1. 3D PAPER TEXTURE AUTHORING (Ultra-HD 2000x2760 mapped to 1200x1656 Grid)
      ====================================================================== */
   const TW = 1200, TH = 1656;
-  const CW = 1400, CH = 1932;
+  const CW = 2000, CH = 2760;
   const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
   const rng = (s) => () => {
     s = (s * 1103515245 + 12345) & 0x7fffffff;
@@ -449,274 +384,264 @@
     ctx.restore();
   }
 
+  function drawImageCover(ctx, img, x, y, w, h, radius) {
+    ctx.save();
+    rr(ctx, x, y, w, h, radius);
+    ctx.clip();
+    const iw = img.naturalWidth || img.width || w;
+    const ih = img.naturalHeight || img.height || h;
+    const scale = Math.max(w / iw, h / ih);
+    const dw = iw * scale;
+    const dh = ih * scale;
+    const dx = x + (w - dw) / 2;
+    const dy = y + (h - dh) / 2;
+    ctx.drawImage(img, dx, dy, dw, dh);
+    ctx.restore();
+  }
+
   function drawGlassContent(ctx, book) {
-    ctx.fillStyle = 'rgba(255,255,255,.040)';
-    ctx.fillRect(0, 0, TW, TH);
+    // Rich translucent dark glass card backing so #bgArt/#bgWord never reduce text contrast
+    ctx.fillStyle = 'rgba(10, 14, 24, 0.90)';
+    rr(ctx, 0, 0, TW, TH, 26);
+    ctx.fill();
 
-    const fr = ctx.createLinearGradient(0, 210, 0, 1180);
-    fr.addColorStop(0, 'rgba(255,255,255,0)');
-    fr.addColorStop(0.22, 'rgba(255,255,255,.075)');
-    fr.addColorStop(0.78, 'rgba(255,255,255,.075)');
-    fr.addColorStop(1, 'rgba(255,255,255,0)');
-    ctx.fillStyle = fr;
-    ctx.fillRect(40, 210, 1120, 970);
+    // Subtle glass sheen & crisp perimeter frame
+    const sheenGrad = ctx.createLinearGradient(0, 0, TW, TH);
+    sheenGrad.addColorStop(0, 'rgba(255, 255, 255, 0.08)');
+    sheenGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.02)');
+    sheenGrad.addColorStop(1, 'rgba(245, 158, 11, 0.06)');
+    ctx.fillStyle = sheenGrad;
+    rr(ctx, 0, 0, TW, TH, 26);
+    ctx.fill();
 
-    ctx.strokeStyle = 'rgba(255,255,255,.34)';
-    ctx.lineWidth = 2;
-    rr(ctx, 20, 20, 1160, 1616, 14);
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(255,255,255,.12)';
-    ctx.lineWidth = 1;
-    rr(ctx, 36, 36, 1128, 1584, 10);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.36)';
+    ctx.lineWidth = 2.5;
+    rr(ctx, 18, 18, TW - 36, TH - 36, 18);
     ctx.stroke();
 
     const M = 76;
-    // Header mark
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '700 68px "Inter Tight", Inter, sans-serif';
-    ctx.fillText('20/11.', M, 142);
+    const CW_INNER = TW - M * 2; // 1048px
 
-    ctx.font = '600 22px Inter, sans-serif';
-    ctx.fillStyle = 'rgba(255,255,255,.55)';
-    const badgeTxt = `CUỐN 0${activeBookIdx + 1} / 0${books.length} · TỦ SÁCH VĂN HÓA VIỆT NAM`;
-    ctx.fillText(badgeTxt, M, 186);
+    // 1. Header (Y = 56..210)
+    ctx.fillStyle = '#FBBF24';
+    ctx.font = '700 22px "Be Vietnam Pro", sans-serif';
+    ctx.fillText(`CUỐN 0${activeBookIdx + 1} / 0${books.length} · TỦ SÁCH VĂN HÓA VIỆT NAM · TRI ÂN 20/11`, M, 84);
 
-    // Book Title + Author
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '600 66px "Inter Tight", Inter, sans-serif';
-    let curY = wrapL(ctx, book.title, M, 280, TW - M * 2, 74, 2);
-
-    ctx.font = '500 30px "Inter Tight", Inter, sans-serif';
-    ctx.fillStyle = 'rgba(255,255,255,.68)';
-    ctx.fillText(`Tác giả: ${book.author}`, M, curY + 12);
-    curY += 64;
-
-    // Divider line
-    ctx.strokeStyle = 'rgba(255,255,255,.20)';
-    ctx.lineWidth = 1.5;
-    ctx.beginPath();
-    ctx.moveTo(M, curY);
-    ctx.lineTo(TW - M, curY);
-    ctx.stroke();
-    curY += 46;
-
-    if (stageFilter === 'all') {
-      // Draw all 3 summary stages cleanly on the glass sheet
-      book.stages.forEach((st, idx) => {
-        ctx.fillStyle = 'rgba(245, 158, 11, 0.92)';
-        ctx.font = '700 21px Inter, sans-serif';
-        ctx.fillText(`0${idx + 1} · ${st.label}`, M, curY);
-        curY += 34;
-
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '600 30px "Inter Tight", Inter, sans-serif';
-        curY = wrapL(ctx, st.title, M, curY, TW - M * 2, 36, 2);
-
-        ctx.fillStyle = 'rgba(255,255,255,.78)';
-        ctx.font = '400 24px Inter, sans-serif';
-        curY = wrapL(ctx, st.narrative, M, curY + 4, TW - M * 2, 32, 4);
-        curY += 28;
-      });
-    } else {
-      const st = book.stages[stageFilter] || book.stages[0];
-      ctx.fillStyle = 'rgba(245, 158, 11, 0.95)';
-      ctx.font = '700 24px Inter, sans-serif';
-      ctx.fillText(st.label, M, curY);
-      curY += 44;
-
-      ctx.fillStyle = '#ffffff';
-      ctx.font = '600 44px "Inter Tight", Inter, sans-serif';
-      curY = wrapL(ctx, st.title, M, curY, TW - M * 2, 52, 3);
-      curY += 16;
-
-      // Embed scene artwork frame directly onto the 3D sheet if loaded
-      if (loadedArtImg && loadedArtImg.complete) {
-        const artW = 460;
-        const artH = 345;
-        ctx.save();
-        rr(ctx, M, curY, artW, artH, 16);
-        ctx.clip();
-        ctx.drawImage(loadedArtImg, M, curY, artW, artH);
-        ctx.restore();
-        ctx.strokeStyle = 'rgba(255,255,255,.35)';
-        ctx.lineWidth = 2;
-        rr(ctx, M, curY, artW, artH, 16);
-        ctx.stroke();
-
-        // Narrative right next to artwork
-        const textX = M + artW + 34;
-        const textW = TW - M - textX;
-        ctx.fillStyle = 'rgba(255,255,255,.88)';
-        ctx.font = '400 26px Inter, sans-serif';
-        wrapL(ctx, st.narrative, textX, curY + 26, textW, 36, 9);
-        curY += artH + 40;
-      } else {
-        ctx.fillStyle = 'rgba(255,255,255,.88)';
-        ctx.font = '400 28px Inter, sans-serif';
-        curY = wrapL(ctx, st.narrative, M, curY, TW - M * 2, 38, 7) + 24;
-      }
-
-      // Quote block
-      ctx.fillStyle = 'rgba(255,255,255,.10)';
-      rr(ctx, M, curY, TW - M * 2, 128, 14);
-      ctx.fill();
-      ctx.fillStyle = '#fde68a';
-      ctx.font = 'italic 400 27px "EB Garamond", Georgia, serif';
-      wrapL(ctx, st.quote, M + 24, curY + 46, TW - M * 2 - 48, 36, 2);
-      curY += 158;
-
-      // Takeaway
-      ctx.fillStyle = 'rgba(167, 243, 208, 0.92)';
-      ctx.font = '600 24px Inter, sans-serif';
-      wrapL(ctx, `Điểm cốt lõi: ${st.takeaway}`, M, curY, TW - M * 2, 34, 2);
+    let titlePt = 52;
+    while (titlePt > 34) {
+      ctx.font = '700 ' + titlePt + 'px "Be Vietnam Pro", sans-serif';
+      if (ctx.measureText(book.title).width <= CW_INNER) break;
+      titlePt -= 2;
     }
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillText(book.title, M, 144);
 
-    // Bottom QR + Signatures + Footer
-    const qrSize = 215;
+    ctx.fillStyle = 'rgba(226, 232, 240, 0.94)';
+    ctx.font = '600 28px "Be Vietnam Pro", sans-serif';
+    ctx.fillText(`Tác giả: ${book.author}`, M, 192);
+
+    // 2. Full-Width Illustration Frame (X = 76, Y = 228, W = 1048, H = 376)
+    const artX = M, artY = 228, artW = CW_INNER, artH = 376;
+    if (loadedArtImg && loadedArtImg.complete && (loadedArtImg.naturalWidth || loadedArtImg.width) > 0) {
+      drawImageCover(ctx, loadedArtImg, artX, artY, artW, artH, 18);
+    } else {
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+      rr(ctx, artX, artY, artW, artH, 18);
+      ctx.fill();
+    }
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.32)';
+    ctx.lineWidth = 2.5;
+    rr(ctx, artX, artY, artW, artH, 18);
+    ctx.stroke();
+
+    // 3. Unified Summary Box (X = 76, Y = 626, W = 1048, H = 462)
+    const sumY = 626, sumH = 462;
+    ctx.fillStyle = 'rgba(12, 17, 29, 0.94)';
+    rr(ctx, M, sumY, CW_INNER, sumH, 18);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
+    ctx.lineWidth = 1.5;
+    rr(ctx, M, sumY, CW_INNER, sumH, 18);
+    ctx.stroke();
+
+    const bullets = book.bullets || [];
+    let by = sumY + 34;
+    bullets.slice(0, 3).forEach((b, idx) => {
+      // Gold pill badge 01, 02, 03
+      ctx.fillStyle = '#F59E0B';
+      rr(ctx, M + 24, by - 4, 48, 34, 9);
+      ctx.fill();
+      ctx.fillStyle = '#0B0B0D';
+      ctx.font = '700 20px "Be Vietnam Pro", sans-serif';
+      const numStr = `0${idx + 1}`;
+      ctx.fillText(numStr, M + 48 - ctx.measureText(numStr).width / 2, by + 20);
+
+      // Bold sub-heading
+      ctx.fillStyle = '#FDE68A';
+      ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
+      ctx.fillText(b.heading, M + 88, by + 22);
+
+      // Crisp 28px Be Vietnam Pro body text
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '500 28px "Be Vietnam Pro", sans-serif';
+      const nextY = wrapL(ctx, b.text, M + 88, by + 62, CW_INNER - 116, 38, 2);
+      by = Math.max(by + 144, nextY + 14);
+    });
+
+    // 4. Compact Quote & Takeaway Box (X = 76, Y = 1108, W = 1048, H = 182)
+    const qtY = 1108, qtH = 182;
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+    rr(ctx, M, qtY, CW_INNER, qtH, 16);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(251, 191, 36, 0.35)';
+    ctx.lineWidth = 1.5;
+    rr(ctx, M, qtY, CW_INNER, qtH, 16);
+    ctx.stroke();
+
+    // 6px Gold left accent bar
+    ctx.fillStyle = '#FBBF24';
+    rr(ctx, M + 16, qtY + 20, 6, qtH - 40, 3);
+    ctx.fill();
+
+    ctx.fillStyle = '#FDE68A';
+    ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
+    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 52, CW_INNER - 64, 36, 2);
+
+    ctx.fillStyle = '#6EE7B7';
+    ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
+    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 12, qtY + 122), CW_INNER - 64, 34, 2);
+
+    // 5. Bottom QR + Signatures + Attribution (Y = 1316..1588)
+    const qrSize = 210;
     const qrX = M;
-    const qrY = TH - 325;
+    const qrY = 1322;
     const routeUrl = getBookRouteUrl(book);
     drawQRCodeOnCanvas(ctx, routeUrl, qrX, qrY, qrSize, '#0f172a', '#ffffff');
 
-    const infoX = qrX + qrSize + 34;
-    ctx.fillStyle = '#ffffff';
-    ctx.font = '700 24px Inter, sans-serif';
+    const infoX = qrX + qrSize + 36;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
     ctx.fillText('QUÉT MÃ QR ĐỂ MỞ TRANG RIÊNG', infoX, qrY + 34);
-    ctx.fillStyle = 'rgba(255,255,255,.68)';
-    ctx.font = '400 21px Inter, sans-serif';
-    wrapL(ctx, routeUrl, infoX, qrY + 72, TW - M - infoX, 28, 2);
+    ctx.fillStyle = 'rgba(226, 232, 240, 0.85)';
+    ctx.font = '500 21px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('https://phucstd115511.github.io/2011', infoX, qrY + 72);
+    ctx.fillText(`/sach/${book.id}/`, infoX, qrY + 104);
 
-    [0, 1].forEach((i) => signature(ctx, infoX + i * 165, qrY + 165, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.65)', 2.2));
+    [0, 1].forEach((i) => signature(ctx, infoX + i * 170, qrY + 168, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.78)', 2.4));
 
-    ctx.font = '700 30px "Inter Tight", Inter, sans-serif';
-    ctx.fillStyle = '#ffffff';
-    ctx.fillText('tri ân 20/11.', M, 1570);
+    ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillText('tri ân 20/11.', M, 1588);
     const w = ctx.measureText('tri ân 20/11.').width;
-    ctx.font = '500 28px "Inter Tight", Inter, sans-serif';
-    ctx.fillStyle = 'rgba(255,255,255,.58)';
-    ctx.fillText(' tủ sách văn hóa việt', M + w, 1570);
+    ctx.font = '500 26px "Be Vietnam Pro", sans-serif';
+    ctx.fillStyle = 'rgba(226, 232, 240, 0.72)';
+    ctx.fillText(' tủ sách văn hóa việt', M + w, 1588);
   }
 
   function drawCertificateContent(ctx, book) {
-    const INK = '#3B2A17';
+    const INK = '#23170C';
     const rnd = rng(4711 + activeBookIdx * 17);
-    ctx.fillStyle = '#EFE4CB';
-    ctx.fillRect(0, 0, TW, TH);
+    ctx.fillStyle = '#F4EAD5';
+    rr(ctx, 0, 0, TW, TH, 26);
+    ctx.fill();
 
-    for (let i = 0; i < 170; i++) {
-      const x = rnd() * TW, y = rnd() * TH, r = 40 + rnd() * 190, a = 0.012 + rnd() * 0.026;
+    for (let i = 0; i < 120; i++) {
+      const x = rnd() * TW, y = rnd() * TH, r = 50 + rnd() * 180, a = 0.012 + rnd() * 0.022;
       const g = ctx.createRadialGradient(x, y, 0, x, y, r);
       g.addColorStop(0, 'rgba(146,112,62,' + a + ')');
       g.addColorStop(1, 'rgba(146,112,62,0)');
       ctx.fillStyle = g;
       ctx.fillRect(x - r, y - r, 2 * r, 2 * r);
     }
-    ctx.lineWidth = 1;
-    for (let i = 0; i < 2200; i++) {
-      const x = rnd() * TW, y = rnd() * TH, a = rnd() * Math.PI, l = 3 + rnd() * 11;
-      ctx.strokeStyle = rnd() < 0.5 ? 'rgba(255,250,238,.22)' : 'rgba(120,96,58,.13)';
-      ctx.beginPath();
-      ctx.moveTo(x, y);
-      ctx.lineTo(x + Math.cos(a) * l, y + Math.sin(a) * l);
-      ctx.stroke();
-    }
 
     ctx.strokeStyle = INK;
-    ctx.lineWidth = 4.5;
-    ctx.strokeRect(56, 56, TW - 112, TH - 112);
+    ctx.lineWidth = 4;
+    ctx.strokeRect(36, 36, TW - 72, TH - 72);
     ctx.lineWidth = 1.4;
-    ctx.strokeRect(74, 74, TW - 148, TH - 148);
+    ctx.strokeRect(50, 50, TW - 100, TH - 100);
+
+    const M = 76;
+    const CW_INNER = TW - M * 2; // 1048px
+
+    // 1. Header
+    ctx.fillStyle = '#8E2B22';
+    ctx.font = '700 22px "Be Vietnam Pro", sans-serif';
+    ctx.fillText(`CUỐN 0${activeBookIdx + 1} / 0${books.length} · TỦ SÁCH TRI ÂN 20/11 · VĂN HÓA VIỆT NAM`, M, 94);
+
+    let titlePt = 50;
+    while (titlePt > 34) {
+      ctx.font = '600 ' + titlePt + 'px "Noto Serif", Georgia, serif';
+      if (ctx.measureText(book.title).width <= CW_INNER) break;
+      titlePt -= 2;
+    }
     ctx.fillStyle = INK;
-    [
-      [74, 74],
-      [TW - 74, 74],
-      [TW - 74, TH - 74],
-      [74, TH - 74]
-    ].forEach(([x, y]) => {
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(Math.PI / 4);
-      ctx.fillRect(-7, -7, 14, 14);
-      ctx.restore();
+    ctx.fillText(book.title, M, 148);
+
+    ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
+    ctx.fillStyle = 'rgba(35, 23, 12, 0.88)';
+    ctx.fillText(`Tác giả: ${book.author}`, M, 196);
+
+    // 2. Illustration Frame
+    const artX = M, artY = 232, artW = CW_INNER, artH = 370;
+    if (loadedArtImg && loadedArtImg.complete && (loadedArtImg.naturalWidth || loadedArtImg.width) > 0) {
+      drawImageCover(ctx, loadedArtImg, artX, artY, artW, artH, 16);
+    }
+    ctx.strokeStyle = 'rgba(59, 42, 23, 0.55)';
+    ctx.lineWidth = 3;
+    rr(ctx, artX, artY, artW, artH, 16);
+    ctx.stroke();
+
+    // 3. Summary Panel
+    const sumY = 622, sumH = 460;
+    ctx.fillStyle = '#EFE1C3';
+    rr(ctx, M, sumY, CW_INNER, sumH, 16);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(59, 42, 23, 0.24)';
+    ctx.lineWidth = 1.5;
+    rr(ctx, M, sumY, CW_INNER, sumH, 16);
+    ctx.stroke();
+
+    const bullets = book.bullets || [];
+    let by = sumY + 34;
+    bullets.slice(0, 3).forEach((b, idx) => {
+      ctx.fillStyle = '#8E2B22';
+      rr(ctx, M + 24, by - 4, 48, 34, 9);
+      ctx.fill();
+      ctx.fillStyle = '#FFF9ED';
+      ctx.font = '700 20px "Be Vietnam Pro", sans-serif';
+      const numStr = `0${idx + 1}`;
+      ctx.fillText(numStr, M + 48 - ctx.measureText(numStr).width / 2, by + 20);
+
+      ctx.fillStyle = '#7A1F18';
+      ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
+      ctx.fillText(b.heading, M + 88, by + 22);
+
+      ctx.fillStyle = '#1E140A';
+      ctx.font = '500 28px "Be Vietnam Pro", sans-serif';
+      const nextY = wrapL(ctx, b.text, M + 88, by + 62, CW_INNER - 116, 38, 2);
+      by = Math.max(by + 144, nextY + 14);
     });
 
-    const M = 112;
-    ctx.fillStyle = 'rgba(59,42,23,.78)';
-    ctx.font = '500 20px Inter, sans-serif';
-    track(ctx, 'TỦ SÁCH TRI ÂN 20/11 · VĂN HÓA VIỆT NAM', 600, 145, 6, true);
+    // 4. Compact Quote & Takeaway Box
+    const qtY = 1102, qtH = 180;
+    ctx.fillStyle = '#E6D4B0';
+    rr(ctx, M, qtY, CW_INNER, qtH, 14);
+    ctx.fill();
+    ctx.fillStyle = '#8E2B22';
+    rr(ctx, M + 16, qtY + 20, 6, qtH - 40, 3);
+    ctx.fill();
 
-    ctx.fillStyle = INK;
-    ctx.font = '500 66px "EB Garamond", Georgia, serif';
-    let curY = wrapL(ctx, book.title, M, 236, TW - M * 2, 74, 2);
+    ctx.fillStyle = '#7A1F18';
+    ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
+    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 52, CW_INNER - 64, 36, 2);
 
-    ctx.font = 'italic 400 34px "EB Garamond", Georgia, serif';
-    ctx.fillStyle = 'rgba(59,42,23,.82)';
-    ctx.fillText(`Tác giả: ${book.author}`, M, curY + 8);
-    curY += 64;
+    ctx.fillStyle = '#1B4332';
+    ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
+    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 12, qtY + 122), CW_INNER - 64, 34, 2);
 
-    if (stageFilter === 'all') {
-      book.stages.forEach((st, idx) => {
-        ctx.fillStyle = '#8E2B22';
-        ctx.font = '700 20px Inter, sans-serif';
-        ctx.fillText(`0${idx + 1} · ${st.label}`, M, curY);
-        curY += 32;
-
-        ctx.fillStyle = INK;
-        ctx.font = '600 31px "EB Garamond", Georgia, serif';
-        curY = wrapL(ctx, st.title, M, curY, TW - M * 2, 36, 2);
-
-        ctx.fillStyle = 'rgba(59,42,23,.85)';
-        ctx.font = '400 25px "EB Garamond", Georgia, serif';
-        curY = wrapL(ctx, st.narrative, M, curY + 4, TW - M * 2, 32, 4);
-        curY += 24;
-      });
-    } else {
-      const st = book.stages[stageFilter] || book.stages[0];
-      ctx.fillStyle = '#8E2B22';
-      ctx.font = '700 22px Inter, sans-serif';
-      ctx.fillText(st.label, M, curY);
-      curY += 42;
-
-      ctx.fillStyle = INK;
-      ctx.font = '600 46px "EB Garamond", Georgia, serif';
-      curY = wrapL(ctx, st.title, M, curY, TW - M * 2, 54, 3) + 14;
-
-      if (loadedArtImg && loadedArtImg.complete) {
-        const artW = 430;
-        const artH = 322;
-        ctx.save();
-        rr(ctx, M, curY, artW, artH, 12);
-        ctx.clip();
-        ctx.drawImage(loadedArtImg, M, curY, artW, artH);
-        ctx.restore();
-        ctx.strokeStyle = 'rgba(59,42,23,.45)';
-        ctx.lineWidth = 2;
-        rr(ctx, M, curY, artW, artH, 12);
-        ctx.stroke();
-
-        const tx = M + artW + 30;
-        ctx.fillStyle = 'rgba(59,42,23,.88)';
-        ctx.font = '400 28px "EB Garamond", Georgia, serif';
-        wrapL(ctx, st.narrative, tx, curY + 26, TW - M - tx, 36, 9);
-        curY += artH + 34;
-      } else {
-        ctx.fillStyle = 'rgba(59,42,23,.88)';
-        ctx.font = '400 30px "EB Garamond", Georgia, serif';
-        curY = wrapL(ctx, st.narrative, M, curY, TW - M * 2, 38, 7) + 20;
-      }
-
-      ctx.fillStyle = '#8E2B22';
-      ctx.font = 'italic 400 29px "EB Garamond", Georgia, serif';
-      curY = wrapL(ctx, st.quote, M, curY, TW - M * 2, 36, 2) + 16;
-
-      ctx.fillStyle = 'rgba(59,42,23,.85)';
-      ctx.font = '600 23px Inter, sans-serif';
-      wrapL(ctx, `Điểm cốt lõi: ${st.takeaway}`, M, curY, TW - M * 2, 32, 2);
-    }
-
-    // Crimson Wax Seal + QR Code + Signatures
+    // 5. Wax Seal + QR + Signatures
     ctx.save();
-    ctx.translate(220, 1345);
+    ctx.translate(160, 1418);
     const sg = ctx.createRadialGradient(-24, -28, 4, 0, 0, 86);
     sg.addColorStop(0, '#B24236');
     sg.addColorStop(1, '#7A2019');
@@ -724,42 +649,38 @@
     ctx.beginPath();
     for (let i = 0; i <= 48; i++) {
       const a = (i / 48) * Math.PI * 2;
-      const r = 78 + Math.sin(a * 9) * 4.2;
+      const r = 74 + Math.sin(a * 9) * 4;
       ctx[i ? 'lineTo' : 'moveTo'](Math.cos(a) * r, Math.sin(a) * r);
     }
     ctx.closePath();
     ctx.fill();
-    ctx.strokeStyle = 'rgba(255,220,205,.32)';
+    ctx.strokeStyle = 'rgba(255,220,205,.38)';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.arc(0, 0, 58, 0, 7);
+    ctx.arc(0, 0, 54, 0, 7);
     ctx.stroke();
-    ctx.fillStyle = 'rgba(255,226,212,.92)';
-    ctx.font = '600 34px "EB Garamond", Georgia, serif';
+    ctx.fillStyle = 'rgba(255,232,220,.95)';
+    ctx.font = '600 34px "Noto Serif", Georgia, serif';
     const sealText = '20/11';
     ctx.fillText(sealText, -ctx.measureText(sealText).width / 2, 12);
     ctx.restore();
 
     const routeUrl = getBookRouteUrl(book);
-    drawQRCodeOnCanvas(ctx, routeUrl, 345, 1230, 215, '#3B2A17', '#FFFDF8');
+    drawQRCodeOnCanvas(ctx, routeUrl, 272, 1312, 210, '#23170C', '#FFFDF8');
 
-    signature(ctx, 625, 1295, 1.4, 9 + activeBookIdx, 'rgba(59,42,23,.82)', 2.4);
-    ctx.strokeStyle = 'rgba(59,42,23,.55)';
-    ctx.lineWidth = 1.2;
-    ctx.beginPath();
-    ctx.moveTo(605, 1348);
-    ctx.lineTo(1060, 1348);
-    ctx.stroke();
-    ctx.fillStyle = 'rgba(59,42,23,.86)';
-    ctx.font = '500 26px "EB Garamond", Georgia, serif';
-    ctx.fillText('Tri Ân Ngày Nhà Giáo Việt Nam', 605, 1384);
-    ctx.fillStyle = 'rgba(59,42,23,.58)';
-    ctx.font = '500 16px Inter, sans-serif';
-    track(ctx, 'QUÉT MÃ QR ĐỂ MỞ SÁCH', 605, 1418, 4, false);
+    const infoX = 514;
+    ctx.fillStyle = '#7A1F18';
+    ctx.font = '700 24px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('QUÉT MÃ QR ĐỂ MỞ TRANG RIÊNG', infoX, 1344);
+    ctx.fillStyle = 'rgba(35, 23, 12, 0.84)';
+    ctx.font = '500 20px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('https://phucstd115511.github.io/2011', infoX, 1380);
+    ctx.fillText(`/sach/${book.id}/`, infoX, 1410);
 
-    ctx.fillStyle = 'rgba(59,42,23,.62)';
-    ctx.font = '500 18px Inter, sans-serif';
-    track(ctx, 'NGÀY NHÀ GIÁO VIỆT NAM · 20 · XI · MMXXVI', 600, 1545, 5, true);
+    signature(ctx, infoX + 40, 1475, 1.35, 9 + activeBookIdx, 'rgba(35,23,12,.85)', 2.4);
+    ctx.fillStyle = 'rgba(35, 23, 12, 0.85)';
+    ctx.font = '600 24px "Noto Serif", Georgia, serif';
+    ctx.fillText('Tri Ân Ngày Nhà Giáo Việt Nam · 20 · XI', infoX, 1532);
   }
 
   function makeCertTexture() {
@@ -781,7 +702,9 @@
     ctx.restore();
     const t = new T.CanvasTexture(c);
     t.encoding = T.sRGBEncoding;
-    t.anisotropy = 8;
+    t.anisotropy = renderer && renderer.capabilities ? renderer.capabilities.getMaxAnisotropy() : 8;
+    t.minFilter = T.LinearFilter;
+    t.magFilter = T.LinearFilter;
     t.needsUpdate = true;
     return t;
   }
@@ -949,10 +872,10 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   NN = normalize(cross(Tu, Tv));
 }`;
 
-  let tex = makeCertTexture();
+  let tex = null;
   const mat = new T.MeshPhysicalMaterial({
-    map: tex,
-    color: new T.Color(0xc4d2e8),
+    map: null,
+    color: new T.Color(0xffffff),
     side: T.DoubleSide,
     metalness: 0.0,
     roughness: 0.06,
@@ -961,8 +884,8 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     iridescence: 0.1,
     iridescenceIOR: 1.35,
     iridescenceThicknessRange: [120, 420],
-    envMapIntensity: 1.15,
-    specularIntensity: 1.0,
+    envMapIntensity: 0.75,
+    specularIntensity: 0.7,
     ior: 1.5,
     transparent: true,
     alphaTest: 0.012,
@@ -991,11 +914,11 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
         '#include <output_fragment>',
         `
       float fres = pow(1.0 - clamp(abs(dot(geometry.normal, geometry.viewDir)),0.0,1.0), 3.2);
-      outgoingLight += fres * uRim * uRimCol;
+      vec3 litSurface = mix(diffuseColor.rgb, outgoingLight, 0.22) + fres * uRim * uRimCol;
       float baseA = diffuseColor.a / max(opacity, 1e-4);
       float outA  = clamp(baseA + fres*uRimA
                         + uSpecA*dot(outgoingLight, vec3(0.3333)), 0.0, 1.0) * opacity;
-      gl_FragColor = vec4( outgoingLight, outA );
+      gl_FragColor = vec4( litSurface, outA );
     `
       );
   };
@@ -1245,8 +1168,9 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     camera.updateProjectionMatrix();
     const visH = 2 * camera.position.z * Math.tan(T.MathUtils.degToRad(camera.fov) / 2);
     const visW = visH * camera.aspect;
-    const wCap = Math.min(0.88, 0.6 + Math.max(0, 1.45 - camera.aspect) * 0.45);
-    group.scale.setScalar(Math.min((visH * 0.63) / SH, (visW * wCap) / SW));
+    const wCap = camera.aspect < 0.85 ? 0.93 : Math.min(0.88, 0.6 + Math.max(0, 1.45 - camera.aspect) * 0.45);
+    const hCap = camera.aspect < 0.85 ? 0.67 : 0.63;
+    group.scale.setScalar(Math.min((visH * hCap) / SH, (visW * wCap) / SW));
   }
   window.addEventListener('resize', resize);
 
@@ -1336,18 +1260,18 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
       uni.uRimCol.value.setHex(0xffe8c8);
       touchLight.color.setHex(0xffd9a8);
     } else {
-      mat.color.setHex(0xc4d2e8);
+      mat.color.setHex(0xffffff);
       mat.roughness = 0.06;
       mat.clearcoat = 1.0;
       mat.clearcoatRoughness = 0.03;
       mat.iridescence = 0.1;
       mat.sheen = 0.0;
-      mat.envMapIntensity = 1.15;
-      mat.specularIntensity = 1.0;
+      mat.envMapIntensity = 0.75;
+      mat.specularIntensity = 0.7;
       mat.alphaTest = 0.012;
-      uni.uRim.value = 0.62;
+      uni.uRim.value = 0.52;
       uni.uRimA.value = 0.88;
-      uni.uSpecA.value = 0.14;
+      uni.uSpecA.value = 0.1;
       uni.uRimCol.value.setHex(0xeaf2ff);
       touchLight.color.setHex(0xdfe8ff);
     }
@@ -1356,8 +1280,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
 
   function refreshSheetTexture() {
     const book = books[activeBookIdx] || books[0];
-    const st = stageFilter === 'all' ? book.stages[0] : book.stages[stageFilter] || book.stages[0];
-    const artSrc = resolveAssetPath(st.image || './assets/scenes/ban-sac-1.svg');
+    const artSrc = resolveAssetPath(book.image || './assets/books/ban-sac-van-hoa-viet-nam.jpg');
 
     // Update dynamic background artwork & wordmark
     const bgArt = document.getElementById('bgArt');
@@ -1416,52 +1339,15 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
       });
     });
 
-    const stageTabs = document.getElementById('stageTabs');
-    const stageOptions = [
-      { key: 'all', label: 'Tổng quan' },
-      { key: 0, label: 'Chặng 1' },
-      { key: 1, label: 'Chặng 2' },
-      { key: 2, label: 'Chặng 3' }
-    ];
-    stageTabs.innerHTML = stageOptions
-      .map(
-        (opt) =>
-          `<button class="pill-btn ${stageFilter === opt.key ? 'is-active' : ''}" data-stage-opt="${opt.key}" type="button">${opt.label}</button>`
-      )
-      .join('');
-
-    stageTabs.querySelectorAll('[data-stage-opt]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const val = btn.dataset.stageOpt;
-        stageFilter = val === 'all' ? 'all' : Number(val);
-        velYaw = 3.8;
-        release = 0.5;
-        renderHUD();
-        refreshSheetTexture();
-      });
-    });
-
     document.querySelectorAll('[data-variant]').forEach((btn) => {
       btn.classList.toggle('is-active', btn.dataset.variant === currentVariant);
     });
     document.body.dataset.bookId = (books[activeBookIdx] || books[0]).id;
-    document.body.dataset.stage = String(stageFilter);
     document.body.dataset.variant = currentVariant;
   }
 
   function stepScene(dir) {
-    const order = ['all', 0, 1, 2];
-    const pos = order.indexOf(stageFilter);
-    const nextPos = pos + dir;
-    if (nextPos >= 0 && nextPos < order.length) {
-      stageFilter = order[nextPos];
-    } else if (dir > 0) {
-      activeBookIdx = (activeBookIdx + 1) % books.length;
-      stageFilter = 'all';
-    } else {
-      activeBookIdx = (activeBookIdx - 1 + books.length) % books.length;
-      stageFilter = 2;
-    }
+    activeBookIdx = (activeBookIdx + dir + books.length) % books.length;
     velYaw = dir > 0 ? 4.8 : -4.8;
     release = 0.55;
     renderHUD();
@@ -1472,14 +1358,15 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     const book = books[activeBookIdx] || books[0];
     const detail = document.getElementById('activeSummaryDetail');
     detail.innerHTML = `
-      <div style="font-size:12px; color:#f59e0b; font-weight:700; margin-bottom:4px;">ĐANG XEM: ${book.title} (${book.author})</div>
-      <div style="display:grid; gap:8px; font-size:13px; color:rgba(242,242,240,0.85);">
-        ${book.stages
+      <div style="font-size:12px; color:#f59e0b; font-weight:700; margin-bottom:6px;">ĐANG XEM: ${book.title} (${book.author})</div>
+      <div style="display:grid; gap:8px; font-size:13px; color:rgba(242,242,240,0.88);">
+        ${(book.bullets || [])
           .map(
-            (s, i) =>
-              `<div><strong>0${i + 1}. ${s.title}:</strong> ${s.narrative}</div>`
+            (b, i) =>
+              `<div><strong>0${i + 1}. ${b.heading}:</strong> ${b.text}</div>`
           )
           .join('')}
+        ${book.quote ? `<div style="color:#fde68a; font-style:italic;">${book.quote}</div>` : ''}
       </div>
     `;
 
@@ -1581,13 +1468,15 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
       title,
       author,
       url,
+      image: './assets/books/ban-sac-van-hoa-viet-nam.jpg',
       accentColor: '#f59e0b',
-      stages: splitSummaryIntoStages(summary, title)
+      bullets: splitSummaryIntoBullets(summary, title),
+      quote: summary ? `“${summary.slice(0, 110)}${summary.length > 110 ? '…' : ''}”` : `“Tri thức từ cuốn sách ${title}.”`,
+      takeaway: `Quà tặng tri thức nhân ngày Nhà giáo Việt Nam 20/11.`
     };
     books.push(newBook);
     saveBooks(books);
     activeBookIdx = books.length - 1;
-    stageFilter = 'all';
     renderHUD();
     renderModalContent();
     refreshSheetTexture();
@@ -1597,7 +1486,6 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     books = JSON.parse(JSON.stringify(DEFAULT_BOOKS));
     saveBooks(books);
     activeBookIdx = 0;
-    stageFilter = 'all';
     renderHUD();
     renderModalContent();
     refreshSheetTexture();
@@ -1607,24 +1495,24 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     applyMaterialVariant();
     renderHUD();
     resize();
+    refreshSheetTexture();
     mesh.visible = true;
     mat.opacity = 0.002;
     renderer.compile(scene, camera);
     renderer.render(scene, camera);
     mat.opacity = 1;
-    refreshSheetTexture();
     frame();
   }
 
   if (document.fonts && document.fonts.ready) {
     Promise.race([
       Promise.all([
-        document.fonts.load('700 68px "Inter Tight"'),
-        document.fonts.load('600 66px "Inter Tight"'),
-        document.fonts.load('600 30px "Inter"'),
-        document.fonts.load('500 22px "Inter"'),
-        document.fonts.load('500 66px "EB Garamond"'),
-        document.fonts.load('italic 400 34px "EB Garamond"')
+        document.fonts.load('700 50px "Be Vietnam Pro"'),
+        document.fonts.load('600 28px "Be Vietnam Pro"'),
+        document.fonts.load('500 27px "Be Vietnam Pro"'),
+        document.fonts.load('700 26px "Be Vietnam Pro"'),
+        document.fonts.load('600 50px "Noto Serif"'),
+        document.fonts.load('italic 600 27px "Noto Serif"')
       ]).then(() => document.fonts.ready),
       new Promise((r) => setTimeout(r, 2500))
     ]).then(boot);
@@ -1640,7 +1528,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     scene,
     camera,
     mesh,
-    state: () => ({ intro, dragYaw, dragPitch, hover, quad, variant: currentVariant, activeBookIdx, stageFilter }),
+    state: () => ({ intro, dragYaw, dragPitch, hover, quad, variant: currentVariant, activeBookIdx }),
     hit: (x, y) => inQuad(x, y),
     spin: (y) => {
       dragYaw = y;
