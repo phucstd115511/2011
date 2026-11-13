@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tri Ân 20/11 · Hành Trình Trang Sách &amp; Mã QR</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true">
+    <div id="readingProgressFill" class="reading-progress__fill"></div>
+  </div>
+
+  <!-- Solo Mode Banner (shown when opened via ?book=slug&solo=1 from a QR code) -->
+  <div id="soloBanner" class="solo-banner hidden no-print">
+    <div class="solo-banner__inner">
+      <span id="soloBannerText">Đang xem trang tóm tắt riêng của cuốn sách</span>
+      <button id="exitSoloBtn" class="btn btn-secondary btn-sm" type="button">Xem toàn bộ bộ sách 20/11</button>
+    </div>
+  </div>
+
+  <!-- Sticky Topbar -->
+  <header class="topbar no-print">
+    <div class="topbar__inner">
+      <a class="brand" href="./">
+        <span class="brand__badge">20/11</span>
+        <div>
+          <div class="brand__title">Hành Trình Trang Sách</div>
+          <div class="brand__sub">Tóm tắt trực quan &amp; Định tuyến Mã QR</div>
+        </div>
+      </a>
+
+      <nav class="mode-tabs" aria-label="Chế độ hiển thị">
+        <button class="mode-tab is-active" data-mode="scrolly" type="button">Cuộn Hành Trình</button>
+        <button class="mode-tab" data-mode="slide" type="button">Vuốt Slide</button>
+        <button class="mode-tab" data-mode="studio" type="button">Xưởng QR &amp; 5 Link GitHub</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="heroSection" class="hero no-print">
+    <div class="hero__card">
+      <div>
+        <span class="hero__eyebrow">Dự án chào mừng Ngày Nhà Giáo Việt Nam 20/11</span>
+        <h1>Quét mã QR, cuộn &amp; vuốt từng trang sách tri ân</h1>
+        <p>
+          Mỗi cuốn sách được cô đọng thành hành trình 3 chặng kèm tranh minh họa khớp với từng nội dung tóm tắt.
+          Chỉ cần <strong>1 kho GitHub Pages duy nhất</strong> để định tuyến nhiều mã QR dẫn đến trang riêng của từng cuốn sách.
+        </p>
+        <div class="hero__actions">
+          <button id="jumpToStudioBtn" class="btn btn-primary" type="button">Nhập 5 link sách &amp; Tạo mã QR</button>
+          <button id="openPrintModalBtn" class="btn btn-secondary" type="button">In bộ thẻ Bookmark 20/11</button>
+        </div>
+      </div>
+
+      <div class="hero__shelf">
+        <div class="hero__shelf-title">Mục lục bộ sách hiện có</div>
+        <div id="heroBookPills" class="book-pills"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="container">
+    <!-- Mode 1: Scrollytelling -->
+    <section id="scrollyView" aria-label="Chế độ cuộn hành trình"></section>
+
+    <!-- Mode 2: Swipe Slide Presentation -->
+    <section id="slideView" class="slide-deck hidden" aria-label="Chế độ vuốt slide">
+      <div class="slide-deck__toolbar">
+        <div id="slideBookSelector" class="slide-book-selector"></div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="slideAutoPlayBtn" class="btn btn-secondary btn-sm" type="button">Tự động chuyển</button>
+          <a id="slideOriginalLink" class="btn btn-sage btn-sm" href="#" target="_blank" rel="noopener">Mở trang sách gốc</a>
+        </div>
+      </div>
+
+      <div id="slideViewport" class="slide-viewport">
+        <div id="storySegments" class="story-segments" aria-label="Tiến trình chặng câu chuyện"></div>
+        <div id="slideCard" class="slide-card"></div>
+        <div class="slide-card__controls">
+          <button id="slidePrevBtn" class="btn btn-secondary btn-sm" type="button">← Chặng trước</button>
+          <span id="slideCounter" class="swipe-hint">Vuốt ngang hoặc dùng phím ← → để chuyển cảnh</span>
+          <button id="slideNextBtn" class="btn btn-primary btn-sm" type="button">Chặng tiếp →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mode 3: Multi-Link GitHub QR Studio -->
+    <section id="studioView" class="studio-grid hidden" aria-label="Xưởng tạo mã QR và quản lý 5 link sách">
+      <div class="studio-panel">
+        <h2>1. Cấu hình 1 Repo GitHub Pages cho nhiều mã QR</h2>
+        <p class="lead">
+          Không cần tạo 5 project riêng lẻ. Bạn chỉ cần đăng 1 trang web lên GitHub Pages, sau đó mỗi mã QR sẽ gắn một đuôi định tuyến riêng
+          (<code>?book=ten-sach&amp;solo=1</code>). Khi ai đó quét mã QR, trang web tự động mở giao diện độc lập của đúng cuốn sách đó.
+        </p>
+
+        <div class="github-router-box">
+          <div class="form-grid">
+            <div class="field">
+              <label for="baseUrlInput">Đường dẫn gốc (GitHub Pages hoặc Localhost)</label>
+              <input id="baseUrlInput" type="url" placeholder="https://phucstd115511.github.io/2011/" />
+            </div>
+            <div class="field">
+              <label for="qrTargetMode">Đích đến khi quét mã QR</label>
+              <select id="qrTargetMode">
+                <option value="subpath">Đường dẫn thư mục riêng trên 1 repo GitHub (/sach/ten-sach/)</option>
+                <option value="solo">Tham số truy vấn (?book=ten-sach&amp;solo=1)</option>
+                <option value="direct">Mở thẳng đường link trang sách gốc</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin: 18px 0 6px; font-family: var(--font-serif);">2. Nhập nhanh bộ 5 đường link sách &amp; nội dung tóm tắt</h3>
+        <p class="lead" style="margin-bottom: 12px;">
+          Điền link và đoạn tóm tắt (ứng dụng tự tách thành 3 chặng vuốt theo từng câu/đoạn, hoặc bạn có thể tải ảnh riêng cho từng chặng).
+        </p>
+
+        <div id="batchRows" class="batch-rows"></div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+          <button id="addBatchRowBtn" class="btn btn-secondary" type="button">+ Thêm dòng sách</button>
+          <button id="saveBatchBooksBtn" class="btn btn-primary" type="button">Cập nhật vào Web &amp; Tạo hàng loạt Mã QR</button>
+          <button id="resetDefaultBooksBtn" class="btn btn-secondary" type="button">Khôi phục bộ sách mẫu 20/11</button>
+          <button id="exportJsonBtn" class="btn btn-sage" type="button">Tải file books-config.json</button>
+        </div>
+      </div>
+
+      <div class="studio-panel">
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+          <div>
+            <h2>3. Bộ Mã QR Độc Lập Theo Từng Đường Dẫn</h2>
+            <p class="lead" style="margin-bottom:0;">Mỗi thẻ bên dưới có một đường dẫn định tuyến riêng và mã QR tải về dạng PNG/SVG.</p>
+          </div>
+          <button id="studioPrintBtn" class="btn btn-secondary" type="button">In tất cả thẻ QR 20/11</button>
+        </div>
+        <div id="qrGallery" class="qr-gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Printable Bookmark Modal -->
+  <div id="printModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="printModalTitle">
+    <div class="modal-sheet">
+      <div class="modal-header no-print">
+        <h2 id="printModalTitle" style="margin:0; font-family:var(--font-serif);">Bộ Thẻ Bookmark &amp; Mã QR Quà Tặng 20/11</h2>
+        <div style="display:flex; gap:8px;">
+          <button id="triggerBrowserPrintBtn" class="btn btn-primary btn-sm" type="button">In / Lưu PDF</button>
+          <button id="closePrintModalBtn" class="btn btn-secondary btn-sm" type="button">Đóng</button>
+        </div>
+      </div>
+      <div id="printCardsGrid" class="print-cards-grid"></div>
+    </div>
+  </div>
+
+  <script src="./qrcode.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

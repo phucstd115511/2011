@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#F5EAD8"/>
+  <!-- Ancient Scroll / Chronicle Background -->
+  <rect x="60" y="55" width="680" height="490" rx="22" fill="#FFFDF8" stroke="#C5A880" stroke-width="4"/>
+  <!-- 3 Pillars of Daily Life ("Văn hóa tức là sinh hoạt") -->
+  <circle cx="400" cy="145" r="45" fill="#C85A32" opacity="0.16"/>
+  <text x="400" y="138" font-family="Georgia,serif" font-size="26" font-weight="700" fill="#1C2536" text-anchor="middle">“Văn hóa tức là sinh hoạt”</text>
+  <text x="400" y="168" font-family="sans-serif" font-size="15" fill="#718096" text-anchor="middle">Đào Duy Anh (1938) — Khảo sát 4.000 năm đời sống dân tộc</text>
+  <!-- Agriculture -->
+  <g transform="translate(105,225)">
+    <rect width="175" height="245" rx="16" fill="#EDF5EE" stroke="#2E6F5E" stroke-width="2"/>
+    <path d="M25 160 Q87 125 150 160 L150 190 L25 190 Z" fill="#3B7044"/>
+    <circle cx="88" cy="95" r="34" fill="#F59E0B"/>
+    <text x="88" y="220" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Nông nghiệp</text>
+  </g>
+  <!-- Handicraft & Ceramics -->
+  <g transform="translate(312,225)">
+    <rect width="175" height="245" rx="16" fill="#FDF2EA" stroke="#C85A32" stroke-width="2"/>
+    <path d="M62 180 Q50 120 75 95 L100 95 Q125 120 113 180 Z" fill="#C85A32"/>
+    <ellipse cx="87.5" cy="95" rx="15" ry="5" fill="#7D2914"/>
+    <text x="88" y="220" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Thủ công nghiệp</text>
+  </g>
+  <!-- River Trade Boats -->
+  <g transform="translate(520,225)">
+    <rect width="175" height="245" rx="16" fill="#EEF4FA" stroke="#3B5998" stroke-width="2"/>
+    <path d="M35 160 L140 160 L125 185 L50 185 Z" fill="#7D3B23"/>
+    <polygon points="88,78 128,150 88,150" fill="#D97706"/>
+    <text x="88" y="220" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Thương nghiệp</text>
+  </g>
+</svg>

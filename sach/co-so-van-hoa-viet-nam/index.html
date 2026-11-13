@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cơ sở văn hóa Việt Nam — Trần Ngọc Thêm · Tri Ân 20/11</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true">
+    <div id="readingProgressFill" class="reading-progress__fill"></div>
+  </div>
+
+  <div id="soloBanner" class="solo-banner no-print">
+    <div class="solo-banner__inner">
+      <span id="soloBannerText">Đang xem trang riêng từ mã QR: Cơ sở văn hóa Việt Nam — Trần Ngọc Thêm</span>
+      <a class="btn btn-secondary btn-sm" href="../../">Xem toàn bộ bộ sách 20/11</a>
+    </div>
+  </div>
+
+  <header class="topbar no-print">
+    <div class="topbar__inner">
+      <a class="brand" href="../../">
+        <span class="brand__badge">20/11</span>
+        <div>
+          <div class="brand__title">Cơ sở văn hóa Việt Nam — Trần Ngọc Thêm</div>
+          <div class="brand__sub">Tóm tắt trực quan &amp; Đọc trang sách gốc</div>
+        </div>
+      </a>
+      <nav class="mode-tabs" aria-label="Chế độ hiển thị">
+        <button class="mode-tab is-active" data-mode="scrolly" type="button">Cuộn Hành Trình</button>
+        <button class="mode-tab" data-mode="slide" type="button">Vuốt Slide</button>
+        <button class="mode-tab" data-mode="studio" type="button">Xưởng QR &amp; 5 Link GitHub</button>
+      </nav>
+    </div>
+  </header>
+
+  <section id="heroSection" class="hero hidden no-print">
+    <div class="hero__card">
+      <div>
+        <span class="hero__eyebrow">Dự án 20/11</span>
+        <h1>Bộ sách Văn hóa Việt Nam</h1>
+        <p>Quét mã QR, cuộn và vuốt từng trang tóm tắt trực quan.</p>
+        <div class="hero__actions">
+          <button id="jumpToStudioBtn" class="btn btn-primary" type="button">Mở Xưởng QR</button>
+          <button id="openPrintModalBtn" class="btn btn-secondary" type="button">In thẻ Bookmark</button>
+        </div>
+      </div>
+      <div class="hero__shelf">
+        <div class="hero__shelf-title">Mục lục bộ sách</div>
+        <div id="heroBookPills" class="book-pills"></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="scrollyView"></section>
+    <section id="slideView" class="slide-deck hidden">
+      <div class="slide-deck__toolbar">
+        <div id="slideBookSelector" class="slide-book-selector"></div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button id="slideAutoPlayBtn" class="btn btn-secondary btn-sm" type="button">Tự động chuyển</button>
+          <a id="slideOriginalLink" class="btn btn-sage btn-sm" href="#" target="_blank" rel="noopener">Mở trang sách gốc</a>
+        </div>
+      </div>
+      <div id="slideViewport" class="slide-viewport">
+        <div id="storySegments" class="story-segments" aria-label="Tiến trình chặng câu chuyện"></div>
+        <div id="slideCard" class="slide-card"></div>
+        <div class="slide-card__controls">
+          <button id="slidePrevBtn" class="btn btn-secondary btn-sm" type="button">← Chặng trước</button>
+          <span id="slideCounter" class="swipe-hint">Vuốt ngang hoặc dùng phím ← →</span>
+          <button id="slideNextBtn" class="btn btn-primary btn-sm" type="button">Chặng tiếp →</button>
+        </div>
+      </div>
+    </section>
+    <section id="studioView" class="studio-grid hidden">
+      <div class="studio-panel">
+        <h2>Cấu hình 1 Repo GitHub Pages cho nhiều mã QR</h2>
+        <div class="github-router-box">
+          <div class="form-grid">
+            <div class="field">
+              <label for="baseUrlInput">Đường dẫn gốc</label>
+              <input id="baseUrlInput" type="url" />
+            </div>
+            <div class="field">
+              <label for="qrTargetMode">Đích đến khi quét mã QR</label>
+              <select id="qrTargetMode">
+                <option value="subpath">Đường dẫn thư mục riêng (/sach/ten-sach/)</option>
+                <option value="solo">Tham số truy vấn (?book=ten-sach&amp;solo=1)</option>
+                <option value="direct">Mở thẳng link trang sách gốc</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="batchRows" class="batch-rows"></div>
+        <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:16px;">
+          <button id="addBatchRowBtn" class="btn btn-secondary" type="button">+ Thêm dòng sách</button>
+          <button id="saveBatchBooksBtn" class="btn btn-primary" type="button">Cập nhật &amp; Tạo Mã QR</button>
+          <button id="resetDefaultBooksBtn" class="btn btn-secondary" type="button">Khôi phục 5 sách Scribd</button>
+          <button id="exportJsonBtn" class="btn btn-sage" type="button">Tải books-config.json</button>
+        </div>
+      </div>
+      <div class="studio-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h2>Bộ Mã QR Độc Lập</h2>
+          <button id="studioPrintBtn" class="btn btn-secondary" type="button">In thẻ QR 20/11</button>
+        </div>
+        <div id="qrGallery" class="qr-gallery"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="printModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-sheet">
+      <div class="modal-header no-print">
+        <h2 style="margin:0; font-family:var(--font-serif);">Bộ Thẻ Bookmark &amp; Mã QR 20/11</h2>
+        <div style="display:flex; gap:8px;">
+          <button id="triggerBrowserPrintBtn" class="btn btn-primary btn-sm" type="button">In / Lưu PDF</button>
+          <button id="closePrintModalBtn" class="btn btn-secondary btn-sm" type="button">Đóng</button>
+        </div>
+      </div>
+      <div id="printCardsGrid" class="print-cards-grid"></div>
+    </div>
+  </div>
+
+  <script>
+    window.BOOK_ROUTE_SLUG = "co-so-van-hoa-viet-nam";
+    window.APP_ROOT_PREFIX = "../../";
+  </script>
+  <script src="../../qrcode.js"></script>
+  <script src="../../app.js"></script>
+</body>
+</html>

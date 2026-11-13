@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#FAF6F0"/>
+  <!-- 3 Historical Contact Columns -->
+  <!-- 1: East Asia Pagoda -->
+  <g transform="translate(55,95)">
+    <rect width="210" height="390" rx="18" fill="#EFE4D4" stroke="#C85A32" stroke-width="2"/>
+    <path d="M40 165 L105 110 L170 165 Z" fill="#C85A32"/>
+    <path d="M55 215 L105 170 L155 215 Z" fill="#A94422"/>
+    <rect x="75" y="215" width="60" height="75" fill="#7D3B23"/>
+    <text x="105" y="335" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Đông Á</text>
+    <text x="105" y="362" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Nho · Phật · Đạo</text>
+  </g>
+  <!-- 2: Cham / Indian Tower -->
+  <g transform="translate(295,95)">
+    <rect width="210" height="390" rx="18" fill="#EFE4D4" stroke="#D97706" stroke-width="2"/>
+    <rect x="75" y="210" width="60" height="80" fill="#B45309"/>
+    <rect x="82" y="165" width="46" height="45" fill="#D97706"/>
+    <polygon points="105,112 128,165 82,165" fill="#92400E"/>
+    <text x="105" y="335" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Ấn Độ · Champa</text>
+    <text x="105" y="362" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Kiến trúc · Điêu khắc</text>
+  </g>
+  <!-- 3: Western Modern / Quoc Ngu -->
+  <g transform="translate(535,95)">
+    <rect width="210" height="390" rx="18" fill="#EFE4D4" stroke="#2E6F5E" stroke-width="2"/>
+    <rect x="65" y="150" width="80" height="140" rx="6" fill="#2E6F5E"/>
+    <path d="M65 150 L105 110 L145 150 Z" fill="#1E4D40"/>
+    <text x="105" y="232" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="middle">AĂÂ</text>
+    <text x="105" y="335" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Phương Tây</text>
+    <text x="105" y="362" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Chữ Quốc ngữ · Đô thị</text>
+  </g>
+  <line x1="160" y1="525" x2="640" y2="525" stroke="#C85A32" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="160" cy="525" r="9" fill="#C85A32"/><circle cx="400" cy="525" r="9" fill="#D97706"/><circle cx="640" cy="525" r="9" fill="#2E6F5E"/>
+</svg>

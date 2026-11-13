@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#F8F1E5"/>
+  <!-- Tam Tai Triangle (Thiên - Địa - Nhân) -->
+  <polygon points="400,68 155,485 645,485" fill="none" stroke="#C85A32" stroke-width="4" stroke-dasharray="10 8"/>
+  <rect x="335" y="42" width="130" height="36" rx="18" fill="#1C2536"/>
+  <text x="400" y="65" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">THIÊN (Trời)</text>
+  <rect x="85" y="465" width="140" height="36" rx="18" fill="#2E6F5E"/>
+  <text x="155" y="488" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">ĐỊA (Đất)</text>
+  <rect x="575" y="465" width="140" height="36" rx="18" fill="#C85A32"/>
+  <text x="645" y="488" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">NHÂN (Người)</text>
+  <!-- Yin Yang Center -->
+  <g transform="translate(400,305)">
+    <circle r="110" fill="#1C2536" stroke="#D97706" stroke-width="6"/>
+    <path d="M0 -110 A110 110 0 0 1 0 110 A55 55 0 0 1 0 0 A55 55 0 0 0 0 -110 Z" fill="#FAF6F0"/>
+    <circle cx="0" cy="-55" r="18" fill="#1C2536"/>
+    <circle cx="0" cy="55" r="18" fill="#FAF6F0"/>
+  </g>
+  <!-- 5 Elements Nodes -->
+  <circle cx="400" cy="145" r="24" fill="#EF4444"/><text x="400" y="150" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Hỏa</text>
+  <circle cx="555" cy="255" r="24" fill="#F59E0B"/><text x="555" y="260" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Thổ</text>
+  <circle cx="505" cy="420" r="24" fill="#94A3B8"/><text x="505" y="425" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Kim</text>
+  <circle cx="295" cy="420" r="24" fill="#3B82F6"/><text x="295" y="425" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Thủy</text>
+  <circle cx="245" cy="255" r="24" fill="#22C55E"/><text x="245" y="260" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Mộc</text>
+</svg>

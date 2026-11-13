@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCE7C8"/><stop offset="100%" stop-color="#F7D2A8"/>
+    </linearGradient>
+    <linearGradient id="roof1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#B84426"/><stop offset="100%" stop-color="#7D2914"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky1)"/>
+  <circle cx="640" cy="130" r="78" fill="#E89A3C" opacity="0.45"/>
+  <!-- Hills & Village Pond -->
+  <path d="M0 390 Q200 340 420 385 T800 370 L800 600 L0 600 Z" fill="#D5B88E"/>
+  <ellipse cx="400" cy="520" rx="340" ry="62" fill="#5A8F9B" opacity="0.72"/>
+  <ellipse cx="400" cy="520" rx="260" ry="38" fill="#77ABB7" opacity="0.5"/>
+  <!-- Ancient Banyan Tree -->
+  <path d="M135 415 Q145 310 130 230 L175 230 Q162 310 185 415 Z" fill="#5C4033"/>
+  <circle cx="155" cy="195" r="85" fill="#3B6E4C"/>
+  <circle cx="100" cy="220" r="58" fill="#4B825B"/>
+  <circle cx="210" cy="215" r="62" fill="#2F5B3E"/>
+  <!-- Communal House (Mái Đình) -->
+  <rect x="275" y="315" width="250" height="105" fill="#F2E4CE" stroke="#8C5A3C" stroke-width="3"/>
+  <rect x="330" y="340" width="38" height="80" fill="#7D3B23"/>
+  <rect x="382" y="340" width="38" height="80" fill="#7D3B23"/>
+  <rect x="434" y="340" width="38" height="80" fill="#7D3B23"/>
+  <path d="M225 322 Q400 245 575 322 L545 335 Q400 278 255 335 Z" fill="url(#roof1)"/>
+  <path d="M250 302 Q400 218 550 302 Q400 265 250 302 Z" fill="#9E331A"/>
+  <!-- 4 Pillars of Vietnamese Identity -->
+  <g transform="translate(595, 195)">
+    <rect x="0" y="0" width="155" height="215" rx="16" fill="#FFFFFF" opacity="0.92" stroke="#C85A32" stroke-width="2.5"/>
+    <circle cx="34" cy="42" r="14" fill="#C85A32"/><text x="34" y="47" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+    <text x="58" y="47" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536">Tổ quốc</text>
+    <circle cx="34" cy="88" r="14" fill="#2E6F5E"/><text x="34" y="93" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+    <text x="58" y="93" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536">Làng xã</text>
+    <circle cx="34" cy="134" r="14" fill="#D97706"/><text x="34" y="139" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+    <text x="58" y="139" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536">Thân phận</text>
+    <circle cx="34" cy="180" r="14" fill="#3B5998"/><text x="34" y="185" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+    <text x="58" y="185" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536">Diện mạo</text>
+  </g>
+</svg>

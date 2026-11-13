@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#FFF8EE"/>
+  <!-- 3 Regional Postcards: Bắc - Trung - Nam -->
+  <g transform="translate(55,95)">
+    <rect width="215" height="360" rx="18" fill="#E8F3EE" stroke="#2E6F5E" stroke-width="2.5"/>
+    <polygon points="35,240 90,130 140,240" fill="#3B6E4C"/>
+    <polygon points="95,240 150,150 190,240" fill="#2E593C"/>
+    <text x="107" y="305" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Miền Bắc · Tây Bắc</text>
+  </g>
+  <g transform="translate(292,95)">
+    <rect width="215" height="360" rx="18" fill="#FDF1E4" stroke="#C85A32" stroke-width="2.5"/>
+    <circle cx="107" cy="175" r="46" fill="#C85A32"/>
+    <ellipse cx="107" cy="175" rx="24" ry="46" fill="#E07A5F"/>
+    <line x1="107" y1="105" x2="107" y2="129" stroke="#7D2914" stroke-width="4"/>
+    <text x="107" y="305" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Miền Trung · Hội An</text>
+  </g>
+  <g transform="translate(530,95)">
+    <rect width="215" height="360" rx="18" fill="#EBF4FB" stroke="#3B5998" stroke-width="2.5"/>
+    <path d="M25 220 Q107 195 190 220 L190 250 L25 250 Z" fill="#4A90E2"/>
+    <path d="M55 210 L160 210 L142 232 L72 232 Z" fill="#8C5A3C"/>
+    <text x="107" y="305" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Nam Bộ · Sông nước</text>
+  </g>
+  <rect x="200" y="492" width="400" height="40" rx="20" fill="#1C2536"/>
+  <text x="400" y="518" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#FAF6F0" text-anchor="middle">Hành trình lãng du khắp dải đất Việt</text>
+</svg>

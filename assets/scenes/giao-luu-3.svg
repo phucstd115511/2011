@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#1B2A41"/>
+  <!-- Global Network Arcs -->
+  <circle cx="400" cy="300" r="190" fill="none" stroke="#60A5FA" stroke-width="2" opacity="0.4"/>
+  <ellipse cx="400" cy="300" rx="190" ry="75" fill="none" stroke="#60A5FA" stroke-width="2" opacity="0.45"/>
+  <ellipse cx="400" cy="300" rx="75" ry="190" fill="none" stroke="#60A5FA" stroke-width="2" opacity="0.45"/>
+  <!-- Cultural Shield in Center -->
+  <path d="M400 135 L525 188 L508 355 Q485 445 400 485 Q315 445 292 355 L275 188 Z" fill="#C85A32" stroke="#FDE68A" stroke-width="6"/>
+  <!-- Five-pointed Golden Star & Bamboo motif -->
+  <polygon points="400,215 420,275 482,275 432,312 451,372 400,335 349,372 368,312 318,275 380,275" fill="#FDE047"/>
+  <rect x="220" y="518" width="360" height="40" rx="20" fill="#FAF6F0"/>
+  <text x="400" y="543" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Sức đề kháng văn hóa trong Toàn cầu hóa</text>
+</svg>

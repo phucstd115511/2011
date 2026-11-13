@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="ocean5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCE7C8"/><stop offset="60%" stop-color="#F6C89F"/><stop offset="60%" stop-color="#2B5876"/><stop offset="100%" stop-color="#1C3B57"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#ocean5)"/>
+  <circle cx="400" cy="240" r="85" fill="#F59E0B" opacity="0.78"/>
+  <!-- Cultural Sailboat sailing globally -->
+  <path d="M260 390 L540 390 L495 450 L305 450 Z" fill="#5C3A21"/>
+  <polygon points="400,150 515,370 400,370" fill="#C85A32"/>
+  <polygon points="390,185 305,370 390,370" fill="#FAF6F0"/>
+  <rect x="195" y="495" width="410" height="42" rx="21" fill="#FAF6F0"/>
+  <text x="400" y="522" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Hòa nhập nhưng không hòa tan · Lan tỏa văn hóa Việt</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#232B3A"/>
+  <!-- Khue Van Cac (Temple of Literature) Silhouette -->
+  <g transform="translate(400,260)">
+    <rect x="-145" y="55" width="290" height="125" fill="#9E331A"/>
+    <rect x="-110" y="-45" width="220" height="100" fill="#B84426"/>
+    <circle cx="0" cy="5" r="34" fill="#FDE68A" stroke="#7D2914" stroke-width="4"/>
+    <path d="M-145 -45 L0 -120 L145 -45 Z" fill="#7D2914"/>
+    <path d="M-175 55 L175 55 L155 40 L-155 40 Z" fill="#5C1D0D"/>
+  </g>
+  <!-- Inkstone, Brush & Golden Exam Scroll -->
+  <rect x="130" y="455" width="540" height="82" rx="16" fill="#FAF6F0"/>
+  <text x="400" y="492" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#1C2536" text-anchor="middle">Chế độ Khoa cử · Quốc học · Tư tưởng Tam giáo</text>
+  <text x="400" y="518" font-family="sans-serif" font-size="14" fill="#4A5568" text-anchor="middle">Xã hội · Chính trị · Trí thức sinh hoạt trong dòng chảy sử Việt</text>
+</svg>

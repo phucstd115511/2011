@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#EFE5D5"/>
+  <!-- Village Gate (Cổng làng) -->
+  <rect x="240" y="180" width="38" height="240" fill="#A0522D"/>
+  <rect x="522" y="180" width="38" height="240" fill="#A0522D"/>
+  <path d="M210 190 Q400 105 590 190 L570 212 Q400 140 230 212 Z" fill="#8B2E1A"/>
+  <rect x="335" y="185" width="130" height="36" rx="6" fill="#FAF6F0" stroke="#8B2E1A" stroke-width="2"/>
+  <text x="400" y="209" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#8B2E1A" text-anchor="middle">LÀNG · NƯỚC</text>
+  <!-- 3 Cultural Living Cards (Ăn - Mặc - Ở) -->
+  <g transform="translate(80,440)">
+    <rect width="195" height="115" rx="14" fill="#FFFFFF" stroke="#E6DCCF" stroke-width="2"/>
+    <text x="97" y="44" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#C85A32" text-anchor="middle">Văn hóa Ăn</text>
+    <text x="97" y="76" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Tổng hợp · Cân bằng Âm Dương</text>
+  </g>
+  <g transform="translate(302,440)">
+    <rect width="195" height="115" rx="14" fill="#FFFFFF" stroke="#E6DCCF" stroke-width="2"/>
+    <text x="97" y="44" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#2E6F5E" text-anchor="middle">Văn hóa Mặc</text>
+    <text x="97" y="76" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Mềm mại · Thích nghi nhiệt đới</text>
+  </g>
+  <g transform="translate(524,440)">
+    <rect width="195" height="115" rx="14" fill="#FFFFFF" stroke="#E6DCCF" stroke-width="2"/>
+    <text x="97" y="44" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#D97706" text-anchor="middle">Ở &amp; Tín ngưỡng</text>
+    <text x="97" y="76" font-family="sans-serif" font-size="13" fill="#4A5568" text-anchor="middle">Gần sông nước · Thờ Tổ tiên</text>
+  </g>
+  <!-- Bamboo River Scene inside Gate -->
+  <path d="M278 420 Q400 355 522 420 Z" fill="#5A8F9B" opacity="0.65"/>
+  <circle cx="400" cy="300" r="44" fill="#F59E0B" opacity="0.5"/>
+</svg>

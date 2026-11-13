@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#F4EDE2"/>
+  <!-- Soil Layers (Cơ tầng văn hóa bản địa) -->
+  <rect x="0" y="340" width="800" height="260" fill="#6D4C3D"/>
+  <rect x="0" y="420" width="800" height="180" fill="#4E342E"/>
+  <rect x="0" y="500" width="800" height="100" fill="#36221D"/>
+  <!-- Flowing External Rivers meeting roots -->
+  <path d="M0 195 Q210 155 370 250" fill="none" stroke="#3B82F6" stroke-width="24" opacity="0.45"/>
+  <path d="M800 195 Q590 155 430 250" fill="none" stroke="#F59E0B" stroke-width="24" opacity="0.45"/>
+  <!-- Deep Tree Roots & Canopy -->
+  <path d="M370 340 L375 215 L425 215 L430 340 Z" fill="#5C4033"/>
+  <path d="M380 340 Q320 420 220 475 M400 340 Q400 440 400 520 M420 340 Q485 425 585 475" stroke="#8D6E63" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <circle cx="400" cy="175" r="95" fill="#2E6F5E"/>
+  <circle cx="325" cy="205" r="65" fill="#3D8572"/>
+  <circle cx="475" cy="205" r="65" fill="#235749"/>
+  <rect x="260" y="438" width="280" height="40" rx="20" fill="#FAF6F0"/>
+  <text x="400" y="463" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Cơ tầng Nội sinh · Chọn lọc Ngoại sinh</text>
+</svg>

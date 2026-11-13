@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="riceSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DDF2EB"/><stop offset="100%" stop-color="#FFF3D6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#riceSky)"/>
+  <circle cx="170" cy="130" r="65" fill="#F59E0B" opacity="0.75"/>
+  <!-- Distant Limestone Mountains -->
+  <path d="M0 320 Q120 205 250 300 Q360 190 500 295 Q660 200 800 310 L800 400 L0 400 Z" fill="#7DA89B" opacity="0.6"/>
+  <!-- Wet Rice Terraces & Delta Fields -->
+  <path d="M0 360 Q280 325 560 360 T800 345 L800 600 L0 600 Z" fill="#4D8B55"/>
+  <path d="M0 420 Q300 385 600 430 T800 415 L800 600 L0 600 Z" fill="#63A364"/>
+  <path d="M0 490 Q350 465 800 505 L800 600 L0 600 Z" fill="#3B7044"/>
+  <!-- Irrigated Water Reflections -->
+  <ellipse cx="440" cy="455" rx="185" ry="18" fill="#B5E2FA" opacity="0.55"/>
+  <ellipse cx="260" cy="535" rx="200" ry="20" fill="#B5E2FA" opacity="0.45"/>
+  <!-- Bamboo Cluster -->
+  <g stroke="#244D2B" stroke-width="6" stroke-linecap="round">
+    <line x1="690" y1="440" x2="705" y2="140"/>
+    <line x1="720" y1="440" x2="742" y2="165"/>
+    <line x1="665" y1="440" x2="672" y2="195"/>
+  </g>
+  <rect x="210" y="532" width="380" height="38" rx="19" fill="#FFFFFF" opacity="0.92"/>
+  <text x="400" y="556" font-family="Georgia,serif" font-size="16" font-weight="700" fill="#1C2536" text-anchor="middle">Văn hóa gốc Nông nghiệp Lúa nước · Trọng tình</text>
+</svg>

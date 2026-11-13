@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#F6EDE1"/>
+  <!-- Scholar's Tea Table & Essay Notebook -->
+  <rect x="110" y="370" width="580" height="150" rx="18" fill="#7D4E38"/>
+  <!-- Teapot & Cup -->
+  <ellipse cx="265" cy="340" rx="52" ry="38" fill="#2E6F5E"/>
+  <circle cx="265" cy="298" r="14" fill="#235749"/>
+  <path d="M213 330 Q180 315 215 352" fill="none" stroke="#2E6F5E" stroke-width="8"/>
+  <ellipse cx="365" cy="355" rx="24" ry="18" fill="#FAF6F0" stroke="#C5A880" stroke-width="2"/>
+  <!-- Essay Manuscript -->
+  <rect x="445" y="185" width="195" height="205" rx="10" fill="#FFFDF9" stroke="#D1C2AD" stroke-width="3"/>
+  <line x1="472" y1="230" x2="615" y2="230" stroke="#C85A32" stroke-width="5"/>
+  <line x1="472" y1="265" x2="600" y2="265" stroke="#718096" stroke-width="3"/>
+  <line x1="472" y1="295" x2="610" y2="295" stroke="#718096" stroke-width="3"/>
+  <line x1="472" y1="325" x2="585" y2="325" stroke="#718096" stroke-width="3"/>
+  <text x="400" y="115" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#1C2536" text-anchor="middle">Tản văn mộc mạc mà uyên bác</text>
+</svg>
