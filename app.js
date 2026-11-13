@@ -323,6 +323,46 @@
     return yy;
   }
 
+  function drawGlassText(ctx, text, x, y, strokeW = 7.5) {
+    ctx.save();
+    ctx.lineJoin = 'round';
+    ctx.miterLimit = 2;
+    ctx.shadowColor = 'rgba(2, 6, 18, 0.92)';
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 2;
+    ctx.strokeStyle = 'rgba(3, 7, 18, 0.94)';
+    ctx.lineWidth = strokeW;
+    ctx.strokeText(text, x, y);
+    ctx.shadowBlur = 0;
+    ctx.fillText(text, x, y);
+    ctx.restore();
+  }
+
+  function wrapGlassL(ctx, text, x, y, maxW, lh, maxLines = 10, strokeW = 7) {
+    const words = String(text || '').split(' ');
+    let line = '';
+    let yy = y;
+    let linesDrawn = 0;
+    for (const w of words) {
+      const t = line ? line + ' ' + w : w;
+      if (ctx.measureText(t).width > maxW && line) {
+        drawGlassText(ctx, line, x, yy, strokeW);
+        linesDrawn++;
+        if (linesDrawn >= maxLines) return yy + lh;
+        line = w;
+        yy += lh;
+      } else {
+        line = t;
+      }
+    }
+    if (line) {
+      drawGlassText(ctx, line, x, yy, strokeW);
+      yy += lh;
+    }
+    return yy;
+  }
+
   function track(ctx, txt, x, y, sp, centre) {
     const chars = [...String(txt || '')];
     let total = 0;
@@ -410,32 +450,35 @@
   }
 
   function drawGlassContent(ctx, book) {
-    // Rich translucent dark glass card backing so #bgArt/#bgWord never reduce text contrast
-    ctx.fillStyle = 'rgba(10, 14, 24, 0.90)';
+    // Canonical translucent see-through glass base
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.045)';
     rr(ctx, 0, 0, TW, TH, 26);
     ctx.fill();
 
-    // Subtle glass sheen & crisp perimeter frame
-    const sheenGrad = ctx.createLinearGradient(0, 0, TW, TH);
-    sheenGrad.addColorStop(0, 'rgba(255, 255, 255, 0.08)');
-    sheenGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.02)');
-    sheenGrad.addColorStop(1, 'rgba(245, 158, 11, 0.06)');
-    ctx.fillStyle = sheenGrad;
-    rr(ctx, 0, 0, TW, TH, 26);
-    ctx.fill();
+    const fr = ctx.createLinearGradient(0, 180, 0, 1420);
+    fr.addColorStop(0, 'rgba(255, 255, 255, 0)');
+    fr.addColorStop(0.22, 'rgba(255, 255, 255, 0.08)');
+    fr.addColorStop(0.78, 'rgba(255, 255, 255, 0.08)');
+    fr.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = fr;
+    ctx.fillRect(40, 180, 1120, 1240);
 
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.36)';
-    ctx.lineWidth = 2.5;
-    rr(ctx, 18, 18, TW - 36, TH - 36, 18);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.38)';
+    ctx.lineWidth = 2.2;
+    rr(ctx, 20, 20, TW - 40, TH - 40, 16);
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.14)';
+    ctx.lineWidth = 1.1;
+    rr(ctx, 36, 36, TW - 72, TH - 72, 12);
     ctx.stroke();
 
     const M = 76;
     const CW_INNER = TW - M * 2; // 1048px
 
     // 1. Header (Y = 56..210)
-    ctx.fillStyle = '#FBBF24';
+    ctx.fillStyle = '#FFE066';
     ctx.font = '700 22px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('ẤN PHẨM ĐẶC BIỆT · TỦ SÁCH VĂN HÓA VIỆT NAM · TRI ÂN 20/11', M, 84);
+    drawGlassText(ctx, 'ẤN PHẨM ĐẶC BIỆT · TỦ SÁCH VĂN HÓA VIỆT NAM · TRI ÂN 20/11', M, 84, 6);
 
     let titlePt = 52;
     while (titlePt > 34) {
@@ -444,11 +487,11 @@
       titlePt -= 2;
     }
     ctx.fillStyle = '#FFFFFF';
-    ctx.fillText(book.title, M, 144);
+    drawGlassText(ctx, book.title, M, 144, 8.5);
 
-    ctx.fillStyle = 'rgba(226, 232, 240, 0.94)';
+    ctx.fillStyle = '#F8FAFC';
     ctx.font = '600 28px "Be Vietnam Pro", sans-serif';
-    ctx.fillText(`Tác giả: ${book.author}`, M, 192);
+    drawGlassText(ctx, `Tác giả: ${book.author}`, M, 192, 6.5);
 
     // 2. Full-Width Illustration Frame (X = 76, Y = 228, W = 1048, H = 400)
     const artX = M, artY = 228, artW = CW_INNER, artH = 400;
@@ -459,18 +502,18 @@
       rr(ctx, artX, artY, artW, artH, 18);
       ctx.fill();
     }
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.32)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.42)';
     ctx.lineWidth = 2.5;
     rr(ctx, artX, artY, artW, artH, 18);
     ctx.stroke();
 
-    // 3. Unified Summary Box (X = 76, Y = 652, W = 1048, H = 486)
+    // 3. Translucent Frosted Summary Box (X = 76, Y = 652, W = 1048, H = 486)
     const sumY = 652, sumH = 486;
-    ctx.fillStyle = 'rgba(12, 17, 29, 0.94)';
+    ctx.fillStyle = 'rgba(10, 16, 30, 0.22)';
     rr(ctx, M, sumY, CW_INNER, sumH, 18);
     ctx.fill();
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
+    ctx.lineWidth = 1.6;
     rr(ctx, M, sumY, CW_INNER, sumH, 18);
     ctx.stroke();
 
@@ -487,24 +530,24 @@
       ctx.fillText(numStr, M + 48 - ctx.measureText(numStr).width / 2, by + 20);
 
       // Bold sub-heading
-      ctx.fillStyle = '#FDE68A';
+      ctx.fillStyle = '#FFE066';
       ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
-      ctx.fillText(b.heading, M + 88, by + 22);
+      drawGlassText(ctx, b.heading, M + 88, by + 22, 6.5);
 
-      // Crisp 28px Be Vietnam Pro body text
+      // Crisp 28px Be Vietnam Pro contoured body text
       ctx.fillStyle = '#FFFFFF';
-      ctx.font = '500 28px "Be Vietnam Pro", sans-serif';
-      const nextY = wrapL(ctx, b.text, M + 88, by + 64, CW_INNER - 116, 40, 2);
+      ctx.font = '600 28px "Be Vietnam Pro", sans-serif';
+      const nextY = wrapGlassL(ctx, b.text, M + 88, by + 64, CW_INNER - 116, 40, 2, 6.5);
       by = Math.max(by + 152, nextY + 18);
     });
 
-    // 4. Compact Quote & Takeaway Box (X = 76, Y = 1162, W = 1048, H = 196)
+    // 4. Translucent Quote & Takeaway Box (X = 76, Y = 1162, W = 1048, H = 196)
     const qtY = 1162, qtH = 196;
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.fillStyle = 'rgba(10, 16, 30, 0.20)';
     rr(ctx, M, qtY, CW_INNER, qtH, 16);
     ctx.fill();
-    ctx.strokeStyle = 'rgba(251, 191, 36, 0.35)';
-    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = 'rgba(251, 191, 36, 0.45)';
+    ctx.lineWidth = 1.6;
     rr(ctx, M, qtY, CW_INNER, qtH, 16);
     ctx.stroke();
 
@@ -513,13 +556,13 @@
     rr(ctx, M + 16, qtY + 20, 6, qtH - 40, 3);
     ctx.fill();
 
-    ctx.fillStyle = '#FDE68A';
+    ctx.fillStyle = '#FFE066';
     ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
-    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 56, CW_INNER - 64, 38, 2);
+    const qAfterY = wrapGlassL(ctx, book.quote, M + 38, qtY + 56, CW_INNER - 64, 38, 2, 6.5);
 
     ctx.fillStyle = '#6EE7B7';
     ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
-    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 14, qtY + 132), CW_INNER - 64, 34, 2);
+    wrapGlassL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 14, qtY + 132), CW_INNER - 64, 34, 2, 6.5);
 
     // 5. Commemorative Emblem + Editorial Dedication + Signatures (Y = 1394..1590)
     ctx.save();
@@ -531,39 +574,39 @@
     ctx.beginPath();
     ctx.arc(0, 0, 68, 0, Math.PI * 2);
     ctx.fill();
-    ctx.strokeStyle = 'rgba(251, 191, 36, 0.72)';
+    ctx.strokeStyle = 'rgba(251, 191, 36, 0.78)';
     ctx.lineWidth = 2.4;
     ctx.beginPath();
     ctx.arc(0, 0, 68, 0, Math.PI * 2);
     ctx.stroke();
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.32)';
     ctx.lineWidth = 1.2;
     ctx.beginPath();
     ctx.arc(0, 0, 56, 0, Math.PI * 2);
     ctx.stroke();
-    ctx.fillStyle = '#FDE68A';
+    ctx.fillStyle = '#FFE066';
     ctx.font = '700 32px "Be Vietnam Pro", sans-serif';
     const emblemTxt = '20/11';
-    ctx.fillText(emblemTxt, -ctx.measureText(emblemTxt).width / 2, 11);
+    drawGlassText(ctx, emblemTxt, -ctx.measureText(emblemTxt).width / 2, 11, 6);
     ctx.restore();
 
     const infoX = 248;
-    ctx.fillStyle = '#FDE68A';
+    ctx.fillStyle = '#FFE066';
     ctx.font = '700 24px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('ẤN PHẨM KỶ NIỆM NGÀY NHÀ GIÁO VIỆT NAM 20/11', infoX, 1428);
-    ctx.fillStyle = 'rgba(226, 232, 240, 0.88)';
-    ctx.font = '500 22px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('Tủ sách Văn hóa Việt Nam · Lưu giữ cội nguồn & khát vọng tri thức', infoX, 1466);
+    drawGlassText(ctx, 'ẤN PHẨM KỶ NIỆM NGÀY NHÀ GIÁO VIỆT NAM 20/11', infoX, 1428, 6);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '600 22px "Be Vietnam Pro", sans-serif';
+    drawGlassText(ctx, 'Tủ sách Văn hóa Việt Nam · Lưu giữ cội nguồn & khát vọng tri thức', infoX, 1466, 5.5);
 
-    [0, 1].forEach((i) => signature(ctx, infoX + i * 210, 1528, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.78)', 2.4));
+    [0, 1].forEach((i) => signature(ctx, infoX + i * 210, 1528, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.88)', 2.4));
 
     ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
     ctx.fillStyle = '#FFFFFF';
-    ctx.fillText('tri ân 20/11.', M, 1588);
+    drawGlassText(ctx, 'tri ân 20/11.', M, 1588, 6);
     const w = ctx.measureText('tri ân 20/11.').width;
-    ctx.font = '500 26px "Be Vietnam Pro", sans-serif';
-    ctx.fillStyle = 'rgba(226, 232, 240, 0.72)';
-    ctx.fillText(' tủ sách văn hóa việt', M + w, 1588);
+    ctx.font = '600 26px "Be Vietnam Pro", sans-serif';
+    ctx.fillStyle = '#F8FAFC';
+    drawGlassText(ctx, ' tủ sách văn hóa việt', M + w, 1588, 6);
   }
 
   function drawCertificateContent(ctx, book) {
@@ -938,8 +981,9 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
         '#include <output_fragment>',
         `
       float fres = pow(1.0 - clamp(abs(dot(geometry.normal, geometry.viewDir)),0.0,1.0), 3.2);
-      vec3 litSurface = mix(diffuseColor.rgb, outgoingLight, 0.22) + fres * uRim * uRimCol;
       float baseA = diffuseColor.a / max(opacity, 1e-4);
+      float glassMask = 1.0 - smoothstep(0.52, 0.88, baseA);
+      vec3 litSurface = mix(diffuseColor.rgb, outgoingLight, 0.22 * glassMask) + fres * uRim * uRimCol * (0.15 + 0.85 * glassMask);
       float outA  = clamp(baseA + fres*uRimA
                         + uSpecA*dot(outgoingLight, vec3(0.3333)), 0.0, 1.0) * opacity;
       gl_FragColor = vec4( litSurface, outA );
