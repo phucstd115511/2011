@@ -890,7 +890,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   }
   float W = uSize.x, H = uSize.y;
   float th0 = sTheta(u,v);
-  P = vec3((x - xe*0.5)*W, (v-0.5)*H + sYoff(u,v), (z - ze*0.5)*W);
+  P = vec3((x - xe*0.5)*W, (v-0.5)*H + (sYoff(u,v) - sYoff(0.5,0.5)), (z - ze*0.5)*W);
   vec3 Tu = vec3(W*cos(th0), sYdU(u,v), W*sin(th0));
   vec3 Tv = vec3((dxv - dxe*0.5)*W, H + sYdV(u,v), (dzv - dze*0.5)*W);
   NN = normalize(cross(Tu, Tv));
@@ -1065,7 +1065,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
 
   function useHint() {
     hintUsed = true;
-    hintEl.style.opacity = '0';
+    if (hintEl) hintEl.style.opacity = '0';
   }
 
   function startDrag(clientX, clientY, pointerId) {
@@ -1200,19 +1200,19 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   const clock = new T.Clock();
   const lightPos = new T.Vector3();
   let intro = 0;
-  let sheetClock = 0;
+  let floatClock = 0;
 
   function frame() {
     requestAnimationFrame(frame);
     const dt = Math.min(clock.getDelta(), 0.05);
-    if (!dragging) sheetClock += dt;
-    const t = sheetClock;
-    uni.uTime.value = REDUCED ? 2.4 : t;
+    if (!dragging) floatClock += dt;
+    const t = floatClock;
+    uni.uTime.value = REDUCED ? 2.4 : clock.elapsedTime;
 
     intro += (1 - intro) * Math.min(1, dt * 1.9);
     mat.opacity = intro;
     halo.material.opacity = intro * (currentVariant === 'certificate' ? 0.55 : 0.3);
-    if (intro > 0.7 && !hintUsed) hintEl.style.opacity = '1';
+    if (hintEl && intro > 0.7 && !hintUsed) hintEl.style.opacity = '1';
 
     if (dragging) {
       const k = Math.min(1, dt * 14);
@@ -1259,6 +1259,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     document.body.dataset.yaw = dragYaw.toFixed(3);
     document.body.dataset.pitch = dragPitch.toFixed(3);
     document.body.dataset.held = dragging ? '1' : '0';
+    document.body.dataset.uTime = uni.uTime.value.toFixed(2);
 
     renderer.render(scene, camera);
   }
