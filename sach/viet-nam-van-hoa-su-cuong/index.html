@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Việt Nam văn hóa sử cương — Đào Duy Anh · Tri Ân 20/11</title>
+  <title>Việt Nam văn hóa sử cương — Học giả Đào Duy Anh · Tri Ân 20/11</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b0b0d'/%3E%3Ccircle cx='13' cy='19' r='6' fill='%23fff'/%3E%3Ccircle cx='25' cy='23' r='2.6' fill='%23fff'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,7 @@
   <div id="bg">
     <img id="bgArt" src="../../assets/books/viet-nam-van-hoa-su-cuong.jpg" alt="" />
     <div id="bgScrim"></div>
-    <h1 id="bgWord">BẢN SẮC</h1>
+    <h1 id="bgWord">SỬ CƯƠNG</h1>
   </div>
 
   <!-- Layers 2..6: Exact ThreeDPaper stack -->
@@ -27,8 +27,7 @@
   <div id="hint"><b>Kéo</b> để xoay tờ giấy 3D<span class="ptr"> &nbsp;·&nbsp; <b>Rê chuột</b> để chiếu sáng</span></div>
 
   <!-- Floating Top HUD -->
-  <header class="hud-top" aria-label="Điều hướng sách và chất liệu">
-    <div id="bookTabsRow" class="hud-row"></div>
+  <header class="hud-top" aria-label="Chất liệu">
     <div class="hud-row">
       <div id="variantTabs" style="display:flex; gap:4px;">
         <button class="pill-btn pill-btn--gold is-active" data-variant="original" type="button">Kính 3D</button>
@@ -40,47 +39,9 @@
   <!-- Floating Bottom Action Dock -->
   <footer class="hud-bottom">
     <div class="hud-dock">
-      <button id="prevSceneBtn" class="dock-btn" type="button" aria-label="Cảnh trước">← Trước</button>
       <a id="openOriginalBtn" class="dock-btn dock-btn--primary" href="#" target="_blank" rel="noopener">Đọc sách gốc ↗</a>
-      <button id="openQrModalBtn" class="dock-btn" type="button">Mã QR &amp; Tóm tắt</button>
-      <button id="nextSceneBtn" class="dock-btn" type="button" aria-label="Cảnh tiếp">Tiếp →</button>
     </div>
   </footer>
-
-  <!-- QR Codes & Full Text Summary Modal -->
-  <div id="qrModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="qrModalTitle">
-    <div class="modal-sheet">
-      <div class="modal-header">
-        <div>
-          <h2 id="qrModalTitle">Bộ 5 Mã QR &amp; Tóm Tắt Sách 20/11</h2>
-          <p style="font-size:12px; color:rgba(242,242,240,0.62); margin-top:4px;">
-            Mỗi mã QR dẫn đến trang 3D Paper riêng của đúng cuốn sách đó trên cùng 1 repo GitHub Pages.
-          </p>
-        </div>
-        <button id="closeQrModalBtn" class="dock-btn" type="button">Đóng ✕</button>
-      </div>
-
-      <div id="activeSummaryDetail" style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:14px;"></div>
-
-      <div id="qrGrid" class="qr-grid"></div>
-
-      <div class="studio-form">
-        <label for="baseUrlInput">Đường dẫn gốc GitHub Pages (cập nhật cả 5 mã QR):</label>
-        <input id="baseUrlInput" type="url" placeholder="https://phucstd115511.github.io/2011/" />
-        <label for="quickAddTitle">Thêm nhanh sách mới (tùy chọn):</label>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:8px;">
-          <input id="quickAddTitle" type="text" placeholder="Tên cuốn sách" />
-          <input id="quickAddAuthor" type="text" placeholder="Tác giả" />
-          <input id="quickAddUrl" type="url" placeholder="Đường link sách (https://...)" />
-        </div>
-        <textarea id="quickAddSummary" rows="3" placeholder="Dán nội dung tóm tắt (3 dòng hoặc 3 câu sẽ tự chia thành 3 chặng)..."></textarea>
-        <div style="display:flex; flex-wrap:wrap; gap:8px;">
-          <button id="quickAddBtn" class="dock-btn dock-btn--primary" type="button">+ Thêm vào Tủ sách 3D</button>
-          <button id="resetBooksBtn" class="dock-btn" type="button">Khôi phục 5 sách mặc định</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script>
     window.BOOK_ROUTE_SLUG = "viet-nam-van-hoa-su-cuong";

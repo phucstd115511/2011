@@ -24,6 +24,8 @@
       url: 'https://fr.scribd.com/document/1027136379/B%E1%BA%A3n-S%E1%BA%AFc-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam-Phan-Ng%E1%BB%8Dc',
       image: './assets/books/ban-sac-van-hoa-viet-nam.jpg',
       accentColor: '#d97706',
+      glow1: 'rgba(245, 158, 11, 0.46)',
+      glow2: 'rgba(225, 29, 72, 0.36)',
       bullets: [
         {
           heading: 'Bốn trục tâm thức bất biến',
@@ -50,6 +52,8 @@
       url: 'https://fr.scribd.com/document/1049743615/8002-Giao-L%C6%B0u-Ti%E1%BA%BFp-Bi%E1%BA%BFn-V%C4%83n-Hoa-Va-S%E1%BB%B1-Bi%E1%BA%BFn-%C4%90%E1%BB%95i-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam',
       image: './assets/books/giao-luu-tiep-bien-van-hoa.jpg',
       accentColor: '#34d399',
+      glow1: 'rgba(16, 185, 129, 0.44)',
+      glow2: 'rgba(59, 130, 246, 0.38)',
       bullets: [
         {
           heading: 'Hòa quyện nội sinh – ngoại sinh',
@@ -76,6 +80,8 @@
       url: 'https://fr.scribd.com/document/945446496/C%C6%A1-S%E1%BB%9F-V%C4%83n-Hoa-Vi%E1%BB%87t-Nam-Tr%E1%BA%A7n-Ng%E1%BB%8Dc-Them-Nxb-%C4%90HQGHN-2024',
       image: './assets/books/co-so-van-hoa-viet-nam.jpg',
       accentColor: '#fbbf24',
+      glow1: 'rgba(251, 191, 36, 0.46)',
+      glow2: 'rgba(16, 185, 129, 0.36)',
       bullets: [
         {
           heading: 'Cội nguồn văn hóa gốc lúa nước',
@@ -102,6 +108,8 @@
       url: 'https://fr.scribd.com/document/675715360/Vi%E1%BB%87t-Nam-V%C4%83n-Hoa-S%E1%BB%AD-C%C6%B0%C6%A1ng-%C4%90ao-Duy-Anh',
       image: './assets/books/viet-nam-van-hoa-su-cuong.jpg',
       accentColor: '#60a5fa',
+      glow1: 'rgba(59, 130, 246, 0.44)',
+      glow2: 'rgba(245, 158, 11, 0.38)',
       bullets: [
         {
           heading: '“Văn hóa tức là sinh hoạt” (1938)',
@@ -128,6 +136,8 @@
       url: 'https://fr.scribd.com/document/804984636/Lang-Du-Trong-Van-Hoa-Viet-Nam-Huu-Ngoc',
       image: './assets/books/lang-du-trong-van-hoa-viet-nam.jpg',
       accentColor: '#f472b6',
+      glow1: 'rgba(236, 72, 153, 0.44)',
+      glow2: 'rgba(139, 92, 246, 0.38)',
       bullets: [
         {
           heading: 'Hành trình xê dịch muôn sắc Việt',
@@ -277,7 +287,7 @@
     s = (s * 1103515245 + 12345) & 0x7fffffff;
     return (s >>> 8) / 8388608;
   };
-  const REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const REDUCED = false;
 
   function rr(ctx, x, y, w, h, r) {
     ctx.beginPath();
@@ -425,7 +435,7 @@
     // 1. Header (Y = 56..210)
     ctx.fillStyle = '#FBBF24';
     ctx.font = '700 22px "Be Vietnam Pro", sans-serif';
-    ctx.fillText(`CUỐN 0${activeBookIdx + 1} / 0${books.length} · TỦ SÁCH VĂN HÓA VIỆT NAM · TRI ÂN 20/11`, M, 84);
+    ctx.fillText('ẤN PHẨM ĐẶC BIỆT · TỦ SÁCH VĂN HÓA VIỆT NAM · TRI ÂN 20/11', M, 84);
 
     let titlePt = 52;
     while (titlePt > 34) {
@@ -440,8 +450,8 @@
     ctx.font = '600 28px "Be Vietnam Pro", sans-serif';
     ctx.fillText(`Tác giả: ${book.author}`, M, 192);
 
-    // 2. Full-Width Illustration Frame (X = 76, Y = 228, W = 1048, H = 376)
-    const artX = M, artY = 228, artW = CW_INNER, artH = 376;
+    // 2. Full-Width Illustration Frame (X = 76, Y = 228, W = 1048, H = 400)
+    const artX = M, artY = 228, artW = CW_INNER, artH = 400;
     if (loadedArtImg && loadedArtImg.complete && (loadedArtImg.naturalWidth || loadedArtImg.width) > 0) {
       drawImageCover(ctx, loadedArtImg, artX, artY, artW, artH, 18);
     } else {
@@ -454,8 +464,8 @@
     rr(ctx, artX, artY, artW, artH, 18);
     ctx.stroke();
 
-    // 3. Unified Summary Box (X = 76, Y = 626, W = 1048, H = 462)
-    const sumY = 626, sumH = 462;
+    // 3. Unified Summary Box (X = 76, Y = 652, W = 1048, H = 486)
+    const sumY = 652, sumH = 486;
     ctx.fillStyle = 'rgba(12, 17, 29, 0.94)';
     rr(ctx, M, sumY, CW_INNER, sumH, 18);
     ctx.fill();
@@ -465,7 +475,7 @@
     ctx.stroke();
 
     const bullets = book.bullets || [];
-    let by = sumY + 34;
+    let by = sumY + 38;
     bullets.slice(0, 3).forEach((b, idx) => {
       // Gold pill badge 01, 02, 03
       ctx.fillStyle = '#F59E0B';
@@ -484,12 +494,12 @@
       // Crisp 28px Be Vietnam Pro body text
       ctx.fillStyle = '#FFFFFF';
       ctx.font = '500 28px "Be Vietnam Pro", sans-serif';
-      const nextY = wrapL(ctx, b.text, M + 88, by + 62, CW_INNER - 116, 38, 2);
-      by = Math.max(by + 144, nextY + 14);
+      const nextY = wrapL(ctx, b.text, M + 88, by + 64, CW_INNER - 116, 40, 2);
+      by = Math.max(by + 152, nextY + 18);
     });
 
-    // 4. Compact Quote & Takeaway Box (X = 76, Y = 1108, W = 1048, H = 182)
-    const qtY = 1108, qtH = 182;
+    // 4. Compact Quote & Takeaway Box (X = 76, Y = 1162, W = 1048, H = 196)
+    const qtY = 1162, qtH = 196;
     ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
     rr(ctx, M, qtY, CW_INNER, qtH, 16);
     ctx.fill();
@@ -505,29 +515,47 @@
 
     ctx.fillStyle = '#FDE68A';
     ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
-    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 52, CW_INNER - 64, 36, 2);
+    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 56, CW_INNER - 64, 38, 2);
 
     ctx.fillStyle = '#6EE7B7';
     ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
-    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 12, qtY + 122), CW_INNER - 64, 34, 2);
+    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 14, qtY + 132), CW_INNER - 64, 34, 2);
 
-    // 5. Bottom QR + Signatures + Attribution (Y = 1316..1588)
-    const qrSize = 210;
-    const qrX = M;
-    const qrY = 1322;
-    const routeUrl = getBookRouteUrl(book);
-    drawQRCodeOnCanvas(ctx, routeUrl, qrX, qrY, qrSize, '#0f172a', '#ffffff');
+    // 5. Commemorative Emblem + Editorial Dedication + Signatures (Y = 1394..1590)
+    ctx.save();
+    ctx.translate(146, 1468);
+    const cg = ctx.createRadialGradient(-20, -24, 6, 0, 0, 74);
+    cg.addColorStop(0, 'rgba(251, 191, 36, 0.34)');
+    cg.addColorStop(1, 'rgba(245, 158, 11, 0.08)');
+    ctx.fillStyle = cg;
+    ctx.beginPath();
+    ctx.arc(0, 0, 68, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(251, 191, 36, 0.72)';
+    ctx.lineWidth = 2.4;
+    ctx.beginPath();
+    ctx.arc(0, 0, 68, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(0, 0, 56, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.fillStyle = '#FDE68A';
+    ctx.font = '700 32px "Be Vietnam Pro", sans-serif';
+    const emblemTxt = '20/11';
+    ctx.fillText(emblemTxt, -ctx.measureText(emblemTxt).width / 2, 11);
+    ctx.restore();
 
-    const infoX = qrX + qrSize + 36;
-    ctx.fillStyle = '#FFFFFF';
-    ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('QUÉT MÃ QR ĐỂ MỞ TRANG RIÊNG', infoX, qrY + 34);
-    ctx.fillStyle = 'rgba(226, 232, 240, 0.85)';
-    ctx.font = '500 21px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('https://phucstd115511.github.io/2011', infoX, qrY + 72);
-    ctx.fillText(`/sach/${book.id}/`, infoX, qrY + 104);
+    const infoX = 248;
+    ctx.fillStyle = '#FDE68A';
+    ctx.font = '700 24px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('ẤN PHẨM KỶ NIỆM NGÀY NHÀ GIÁO VIỆT NAM 20/11', infoX, 1428);
+    ctx.fillStyle = 'rgba(226, 232, 240, 0.88)';
+    ctx.font = '500 22px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('Tủ sách Văn hóa Việt Nam · Lưu giữ cội nguồn & khát vọng tri thức', infoX, 1466);
 
-    [0, 1].forEach((i) => signature(ctx, infoX + i * 170, qrY + 168, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.78)', 2.4));
+    [0, 1].forEach((i) => signature(ctx, infoX + i * 210, 1528, 1.05, i * 7 + activeBookIdx + 3, 'rgba(255,255,255,.78)', 2.4));
 
     ctx.font = '700 28px "Be Vietnam Pro", sans-serif';
     ctx.fillStyle = '#FFFFFF';
@@ -566,7 +594,7 @@
     // 1. Header
     ctx.fillStyle = '#8E2B22';
     ctx.font = '700 22px "Be Vietnam Pro", sans-serif';
-    ctx.fillText(`CUỐN 0${activeBookIdx + 1} / 0${books.length} · TỦ SÁCH TRI ÂN 20/11 · VĂN HÓA VIỆT NAM`, M, 94);
+    ctx.fillText('ẤN PHẨM ĐẶC BIỆT · TỦ SÁCH TRI ÂN 20/11 · VĂN HÓA VIỆT NAM', M, 94);
 
     let titlePt = 50;
     while (titlePt > 34) {
@@ -582,7 +610,7 @@
     ctx.fillText(`Tác giả: ${book.author}`, M, 196);
 
     // 2. Illustration Frame
-    const artX = M, artY = 232, artW = CW_INNER, artH = 370;
+    const artX = M, artY = 232, artW = CW_INNER, artH = 396;
     if (loadedArtImg && loadedArtImg.complete && (loadedArtImg.naturalWidth || loadedArtImg.width) > 0) {
       drawImageCover(ctx, loadedArtImg, artX, artY, artW, artH, 16);
     }
@@ -592,7 +620,7 @@
     ctx.stroke();
 
     // 3. Summary Panel
-    const sumY = 622, sumH = 460;
+    const sumY = 650, sumH = 486;
     ctx.fillStyle = '#EFE1C3';
     rr(ctx, M, sumY, CW_INNER, sumH, 16);
     ctx.fill();
@@ -602,7 +630,7 @@
     ctx.stroke();
 
     const bullets = book.bullets || [];
-    let by = sumY + 34;
+    let by = sumY + 38;
     bullets.slice(0, 3).forEach((b, idx) => {
       ctx.fillStyle = '#8E2B22';
       rr(ctx, M + 24, by - 4, 48, 34, 9);
@@ -618,12 +646,12 @@
 
       ctx.fillStyle = '#1E140A';
       ctx.font = '500 28px "Be Vietnam Pro", sans-serif';
-      const nextY = wrapL(ctx, b.text, M + 88, by + 62, CW_INNER - 116, 38, 2);
-      by = Math.max(by + 144, nextY + 14);
+      const nextY = wrapL(ctx, b.text, M + 88, by + 64, CW_INNER - 116, 40, 2);
+      by = Math.max(by + 152, nextY + 18);
     });
 
     // 4. Compact Quote & Takeaway Box
-    const qtY = 1102, qtH = 180;
+    const qtY = 1158, qtH = 194;
     ctx.fillStyle = '#E6D4B0';
     rr(ctx, M, qtY, CW_INNER, qtH, 14);
     ctx.fill();
@@ -633,15 +661,15 @@
 
     ctx.fillStyle = '#7A1F18';
     ctx.font = 'italic 600 28px "Noto Serif", Georgia, serif';
-    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 52, CW_INNER - 64, 36, 2);
+    const qAfterY = wrapL(ctx, book.quote, M + 38, qtY + 56, CW_INNER - 64, 38, 2);
 
     ctx.fillStyle = '#1B4332';
     ctx.font = '700 26px "Be Vietnam Pro", sans-serif';
-    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 12, qtY + 122), CW_INNER - 64, 34, 2);
+    wrapL(ctx, `Điểm cốt lõi: ${book.takeaway}`, M + 38, Math.max(qAfterY + 14, qtY + 130), CW_INNER - 64, 34, 2);
 
-    // 5. Wax Seal + QR + Signatures
+    // 5. Wax Seal + Editorial Dedication + Signatures
     ctx.save();
-    ctx.translate(160, 1418);
+    ctx.translate(146, 1468);
     const sg = ctx.createRadialGradient(-24, -28, 4, 0, 0, 86);
     sg.addColorStop(0, '#B24236');
     sg.addColorStop(1, '#7A2019');
@@ -649,7 +677,7 @@
     ctx.beginPath();
     for (let i = 0; i <= 48; i++) {
       const a = (i / 48) * Math.PI * 2;
-      const r = 74 + Math.sin(a * 9) * 4;
+      const r = 72 + Math.sin(a * 9) * 4;
       ctx[i ? 'lineTo' : 'moveTo'](Math.cos(a) * r, Math.sin(a) * r);
     }
     ctx.closePath();
@@ -657,30 +685,26 @@
     ctx.strokeStyle = 'rgba(255,220,205,.38)';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.arc(0, 0, 54, 0, 7);
+    ctx.arc(0, 0, 52, 0, 7);
     ctx.stroke();
     ctx.fillStyle = 'rgba(255,232,220,.95)';
-    ctx.font = '600 34px "Noto Serif", Georgia, serif';
+    ctx.font = '600 32px "Noto Serif", Georgia, serif';
     const sealText = '20/11';
     ctx.fillText(sealText, -ctx.measureText(sealText).width / 2, 12);
     ctx.restore();
 
-    const routeUrl = getBookRouteUrl(book);
-    drawQRCodeOnCanvas(ctx, routeUrl, 272, 1312, 210, '#23170C', '#FFFDF8');
-
-    const infoX = 514;
+    const infoX = 248;
     ctx.fillStyle = '#7A1F18';
     ctx.font = '700 24px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('QUÉT MÃ QR ĐỂ MỞ TRANG RIÊNG', infoX, 1344);
-    ctx.fillStyle = 'rgba(35, 23, 12, 0.84)';
-    ctx.font = '500 20px "Be Vietnam Pro", sans-serif';
-    ctx.fillText('https://phucstd115511.github.io/2011', infoX, 1380);
-    ctx.fillText(`/sach/${book.id}/`, infoX, 1410);
+    ctx.fillText('ẤN PHẨM KỶ NIỆM NGÀY NHÀ GIÁO VIỆT NAM 20/11', infoX, 1422);
+    ctx.fillStyle = 'rgba(35, 23, 12, 0.86)';
+    ctx.font = '500 22px "Be Vietnam Pro", sans-serif';
+    ctx.fillText('Tủ sách Văn hóa Việt Nam · Lưu giữ cội nguồn & khát vọng tri thức', infoX, 1458);
 
-    signature(ctx, infoX + 40, 1475, 1.35, 9 + activeBookIdx, 'rgba(35,23,12,.85)', 2.4);
+    signature(ctx, infoX + 20, 1516, 1.32, 9 + activeBookIdx, 'rgba(35,23,12,.85)', 2.4);
     ctx.fillStyle = 'rgba(35, 23, 12, 0.85)';
     ctx.font = '600 24px "Noto Serif", Georgia, serif';
-    ctx.fillText('Tri Ân Ngày Nhà Giáo Việt Nam · 20 · XI', infoX, 1532);
+    ctx.fillText('Tri Ân Ngày Nhà Giáo Việt Nam · 20 · XI', infoX, 1568);
   }
 
   function makeCertTexture() {
@@ -1082,6 +1106,10 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   function endDrag(pointerId) {
     if (dragging) {
       dragging = false;
+      if (moved <= 6) {
+        velYaw = 0;
+        velPitch = 0;
+      }
       release = 0.65;
       canvas.classList.remove('is-dragging');
       if (pointerId != null && canvas.releasePointerCapture) {
@@ -1149,11 +1177,6 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     { passive: false }
   );
 
-  canvas.addEventListener('dblclick', () => {
-    if (modalOpen) return;
-    stepScene(1);
-  });
-
   /* ======================================================================
      5. RESIZE & FRAME LOOP
      ====================================================================== */
@@ -1177,11 +1200,13 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   const clock = new T.Clock();
   const lightPos = new T.Vector3();
   let intro = 0;
+  let sheetClock = 0;
 
   function frame() {
     requestAnimationFrame(frame);
     const dt = Math.min(clock.getDelta(), 0.05);
-    const t = clock.elapsedTime;
+    if (!dragging) sheetClock += dt;
+    const t = sheetClock;
     uni.uTime.value = REDUCED ? 2.4 : t;
 
     intro += (1 - intro) * Math.min(1, dt * 1.9);
@@ -1208,12 +1233,12 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
         dragYaw += (home - dragYaw) * k;
         dragPitch -= dragPitch * k;
       }
+      mouse.x += (mouse.tx - mouse.x) * Math.min(1, dt * 3.0);
+      mouse.y += (mouse.ty - mouse.y) * Math.min(1, dt * 3.0);
     }
     prevYaw = dragYaw;
     prevPitch = dragPitch;
 
-    mouse.x += (mouse.tx - mouse.x) * Math.min(1, dt * 3.0);
-    mouse.y += (mouse.ty - mouse.y) * Math.min(1, dt * 3.0);
     const idle = REDUCED ? 0 : 1;
     const rise = 1 - intro;
     group.rotation.y = dragYaw + mouse.x * 0.16 + Math.sin(t * 0.23) * 0.045 * idle;
@@ -1233,6 +1258,7 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     buildQuad();
     document.body.dataset.yaw = dragYaw.toFixed(3);
     document.body.dataset.pitch = dragPitch.toFixed(3);
+    document.body.dataset.held = dragging ? '1' : '0';
 
     renderer.render(scene, camera);
   }
@@ -1282,11 +1308,13 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
     const book = books[activeBookIdx] || books[0];
     const artSrc = resolveAssetPath(book.image || './assets/books/ban-sac-van-hoa-viet-nam.jpg');
 
-    // Update dynamic background artwork & wordmark
+    // Update dynamic background artwork, vibrant radial glow & wordmark
     const bgArt = document.getElementById('bgArt');
     const bgWord = document.getElementById('bgWord');
     if (bgArt) bgArt.src = artSrc;
     if (bgWord) bgWord.textContent = book.bgWord || book.shortTitle || '20/11';
+    if (book.glow1) document.documentElement.style.setProperty('--glow-1', book.glow1);
+    if (book.glow2) document.documentElement.style.setProperty('--glow-2', book.glow2);
 
     const openOriginalBtn = document.getElementById('openOriginalBtn');
     if (openOriginalBtn) openOriginalBtn.href = book.url || '#';
@@ -1318,104 +1346,11 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
   }
 
   function renderHUD() {
-    const bookTabsRow = document.getElementById('bookTabsRow');
-    bookTabsRow.innerHTML = books
-      .map(
-        (b, idx) =>
-          `<button class="pill-btn ${idx === activeBookIdx ? 'is-active' : ''}" data-book-idx="${idx}" type="button">${idx + 1}. ${b.shortTitle || b.title}</button>`
-      )
-      .join('');
-
-    bookTabsRow.querySelectorAll('[data-book-idx]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const nextIdx = Number(btn.dataset.bookIdx);
-        if (nextIdx !== activeBookIdx) {
-          activeBookIdx = nextIdx;
-          velYaw = 4.6;
-          release = 0.6;
-          renderHUD();
-          refreshSheetTexture();
-        }
-      });
-    });
-
     document.querySelectorAll('[data-variant]').forEach((btn) => {
       btn.classList.toggle('is-active', btn.dataset.variant === currentVariant);
     });
     document.body.dataset.bookId = (books[activeBookIdx] || books[0]).id;
     document.body.dataset.variant = currentVariant;
-  }
-
-  function stepScene(dir) {
-    activeBookIdx = (activeBookIdx + dir + books.length) % books.length;
-    velYaw = dir > 0 ? 4.8 : -4.8;
-    release = 0.55;
-    renderHUD();
-    refreshSheetTexture();
-  }
-
-  function renderModalContent() {
-    const book = books[activeBookIdx] || books[0];
-    const detail = document.getElementById('activeSummaryDetail');
-    detail.innerHTML = `
-      <div style="font-size:12px; color:#f59e0b; font-weight:700; margin-bottom:6px;">ĐANG XEM: ${book.title} (${book.author})</div>
-      <div style="display:grid; gap:8px; font-size:13px; color:rgba(242,242,240,0.88);">
-        ${(book.bullets || [])
-          .map(
-            (b, i) =>
-              `<div><strong>0${i + 1}. ${b.heading}:</strong> ${b.text}</div>`
-          )
-          .join('')}
-        ${book.quote ? `<div style="color:#fde68a; font-style:italic;">${book.quote}</div>` : ''}
-      </div>
-    `;
-
-    const qrGrid = document.getElementById('qrGrid');
-    qrGrid.innerHTML = books
-      .map((b, idx) => {
-        const url = getBookRouteUrl(b);
-        const svg = window.QRCodeGenerator.toSVG(url, { size: 150 });
-        return `
-        <div class="qr-card">
-          <div style="font-weight:700; font-size:14px;">${idx + 1}. ${b.title}</div>
-          <div class="qr-card__svg">${svg}</div>
-          <div class="qr-card__url">${url}</div>
-          <div style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center;">
-            <button class="dock-btn" data-dl-png="${b.id}" type="button">Tải PNG</button>
-            <button class="dock-btn" data-dl-svg="${b.id}" type="button">Tải SVG</button>
-            <a class="dock-btn dock-btn--primary" href="${url}" target="_blank" rel="noopener">Mở link ↗</a>
-          </div>
-        </div>
-      `;
-      })
-      .join('');
-
-    qrGrid.querySelectorAll('[data-dl-png]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const b = books.find((x) => x.id === btn.dataset.dlPng);
-        if (!b) return;
-        const canvasQr = window.QRCodeGenerator.toCanvas(getBookRouteUrl(b), { size: 520, label: b.title });
-        const a = document.createElement('a');
-        a.href = canvasQr.toDataURL('image/png');
-        a.download = `qr-${b.id}.png`;
-        a.click();
-      });
-    });
-
-    qrGrid.querySelectorAll('[data-dl-svg]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const b = books.find((x) => x.id === btn.dataset.dlSvg);
-        if (!b) return;
-        const svg = window.QRCodeGenerator.toSVG(getBookRouteUrl(b), { size: 420 });
-        const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = `qr-${b.id}.svg`;
-        a.click();
-      });
-    });
-
-    document.getElementById('baseUrlInput').value = settings.baseUrl || PUBLIC_GITHUB_PAGES_URL;
   }
 
   // Event Wireup
@@ -1426,69 +1361,6 @@ void sheetPoint(vec2 q, out vec3 P, out vec3 NN){
       renderHUD();
       refreshSheetTexture();
     });
-  });
-
-  document.getElementById('prevSceneBtn').addEventListener('click', () => stepScene(-1));
-  document.getElementById('nextSceneBtn').addEventListener('click', () => stepScene(1));
-
-  document.addEventListener('keydown', (e) => {
-    if (modalOpen) return;
-    if (e.key === 'ArrowRight') stepScene(1);
-    if (e.key === 'ArrowLeft') stepScene(-1);
-  });
-
-  const qrModal = document.getElementById('qrModal');
-  document.getElementById('openQrModalBtn').addEventListener('click', () => {
-    modalOpen = true;
-    renderModalContent();
-    qrModal.classList.remove('hidden');
-  });
-  document.getElementById('closeQrModalBtn').addEventListener('click', () => {
-    modalOpen = false;
-    qrModal.classList.add('hidden');
-  });
-
-  document.getElementById('baseUrlInput').addEventListener('change', (e) => {
-    settings.baseUrl = e.target.value.trim() || PUBLIC_GITHUB_PAGES_URL;
-    saveSettings(settings);
-    renderModalContent();
-    refreshSheetTexture();
-  });
-
-  document.getElementById('quickAddBtn').addEventListener('click', () => {
-    const title = document.getElementById('quickAddTitle').value.trim();
-    const author = document.getElementById('quickAddAuthor').value.trim() || 'Sưu tầm 20/11';
-    const url = document.getElementById('quickAddUrl').value.trim() || PUBLIC_GITHUB_PAGES_URL;
-    const summary = document.getElementById('quickAddSummary').value.trim();
-    if (!title) return;
-    const newBook = {
-      id: slugify(title),
-      shortTitle: title.slice(0, 18),
-      bgWord: title.split(' ').slice(0, 2).join(' ').toUpperCase(),
-      title,
-      author,
-      url,
-      image: './assets/books/ban-sac-van-hoa-viet-nam.jpg',
-      accentColor: '#f59e0b',
-      bullets: splitSummaryIntoBullets(summary, title),
-      quote: summary ? `“${summary.slice(0, 110)}${summary.length > 110 ? '…' : ''}”` : `“Tri thức từ cuốn sách ${title}.”`,
-      takeaway: `Quà tặng tri thức nhân ngày Nhà giáo Việt Nam 20/11.`
-    };
-    books.push(newBook);
-    saveBooks(books);
-    activeBookIdx = books.length - 1;
-    renderHUD();
-    renderModalContent();
-    refreshSheetTexture();
-  });
-
-  document.getElementById('resetBooksBtn').addEventListener('click', () => {
-    books = JSON.parse(JSON.stringify(DEFAULT_BOOKS));
-    saveBooks(books);
-    activeBookIdx = 0;
-    renderHUD();
-    renderModalContent();
-    refreshSheetTexture();
   });
 
   function boot() {
